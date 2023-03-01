@@ -1,0 +1,380 @@
+clients:
+- asn: 138517
+  name: "Poema Network(KSKB-IX)"
+  ip: "fe80::1000:138:517"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-POEMA]
+- asn: 207705
+  name: "JK-Network"
+  ip: "fe80::207:705"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-JKNET]
+- asn: 51930
+  name: "Haonan Yang"
+  ip: "fe80::51:930"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-AUGUST]
+- asn: 210320
+  ip: "fe80::210:320"
+  name: "ZH Innovation Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-ZH-NET]
+- asn: 213262
+  ip: "fe80::213:262"
+  name: "Moe Overflow Electric"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-CUTE]
+- asn: 61302
+  ip: "fe80::61:302"
+  name: "HUIZE-NET"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-HUIZE]
+- asn: 141237
+  ip: "2404:f4c0:f70e:1980::141:237"
+  name: "Moecast Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-MOEC]
+- asn: 139317
+  ip: "fe80::139:317"
+  name: "ZX Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-ZXINC]
+- asn: 7721
+  ip: "fe80::7721"
+  name: "Qin Cloud Networks"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [APNIC::AS-QINCLOUD]
+- asn: 209306
+  ip: "2404:f4c0:f70e:1980::209:306"
+  name: "SohaNET"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS209306:AS-SET]
+- asn: 140913
+  ip: "fe80::140:913"
+  name: "Hentai Network Lab"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-KOISHI]
+- asn: 139328
+  ip: "fe80::139:328"
+  name: "Haima Global Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [RIPE::AS-MOEBEE-CN]
+- asn: 142551
+  ip: "fe80::142:551"
+  name: "Azurite27 Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
+- asn: 140731
+  ip: "fe80::140:731"
+  name: "TOHU Public Internet"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [RIPE::AS-TOHUNET]
+- asn: 142281
+  ip: "fe80::142:281"
+  name: "Yuuta Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
+- asn: 208223
+  ip: "fe80::208:223"
+  name: "Foxo.tw's ASN"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS208223:AS-ALL]
+- asn: 212483
+  ip: "fe80::212:483"
+  name: "Level 86 Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [RIPE::AS-86]
+- asn: 210932
+  ip: "fe80::210:932"
+  name: "Chess Network Services"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-CHESSKUO]
+- asn: 134478
+  ip: "fe80::134:478"
+  name: "JSMSR"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-JSMSR]
+- asn: 212357
+  ip: "2404:f4c0:f70e:1980::212:357"
+  name: "Leko Internet Individual"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-LEKO]
+- asn: 17415
+  ip: "2404:f4c0:f70e:1980::17:415"
+  name: "Ming Yi Tea Farm"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-Sciuridae]
+- asn: 9886
+  ip: "2404:f4c0:f70e:1980::9886"
+  name: "MercyCloud Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-MERCYCLOUD]
+- asn: 140506
+  ip: "fe80::140:506"
+  name: "ZR Global Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
+- asn: 149835
+  ip: "fe80::149:835"
+  name: "HUAJINET Internet"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS149835:AS-ALL]
+- asn: 60326
+  ip: "fe80::60:326"
+  name: "MrSheepNET"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-MrSheep]
+        enforce_origin_in_as_set: False
+        enforce_prefix_in_as_set: False
+      transit_free:
+        action: "tag"
+      never_via_route_servers:
+        peering_db: False
+        asns: []
+      max_prefix:
+        peering_db:
+          enabled: False
+        limit_ipv6: 1000000
+      rpki_bgp_origin_validation:
+        enabled: False
+        reject_invalid: False
+      ipv4_pref_len:
+        min: 0
+        max: 24
+      ipv6_pref_len:
+        min: 0
+        max: 48
+      #reject_policy: 
+        #policy: tag
+- asn: 142055
+  ip: "fe80::142:055"
+  name: "Anillc Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-ANILLC]
+- asn: 203472
+  ip: "fe80::203:472"
+  name: "Poema Network(EU)"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-POEMA]
+- asn: 205603
+  ip: "2404:f4c0:f70e:1980::205:603"
+  name: "Wolf Network Lab"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-WOLFLAB]
+- asn: 57429
+  ip: "2404:f4c0:f70e:1980::57:429"
+  name: "Haraguroicha Internet Services"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-HARAGUROICHA]
+- asn: 204508
+  ip: "fe80::204:508"
+  name: "Gatterer Manuel"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-MLGT]
+- asn: 203314
+  ip: "fe80::203:314"
+  name: "Hats Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-HATSNET]
+- asn: 212154
+  ip: "fe80::212:154"
+  name: "Saru Network 🤔"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-SARUNETWORK]
+- asn: 131171
+  ip: "fe80::131:171"
+  name: "Everlife Networks"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [APNIC::AS-SET-AS131171]
+- asn: 202952
+  ip: "fe80::202:952"
+  name: "Bandura Communications"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-BANDURA-SET]
+- asn: 57406
+  ip: "fe80::57:406"
+  name: "Zero Distance"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-ZERODISTANCE]
+- asn: 205329
+  ip: "2404:f4c0:f70e:1980::205:329"
+  name: "Muilties Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-MUILTIES]
+- asn: 200105
+  ip: "fe80::200:105"
+  name: "MQNET"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-MoeQing]
+- asn: 210000
+  ip: "2404:f4c0:f70e:1980::210:0"
+  name: "DAOport OU"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-DAOPORT]
+- asn: 202939
+  ip: "fe80::202:939"
+  name: "Chimon Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-CHIMON]
+- asn: 202776
+  ip: "2404:f4c0:f70e:1980::202:776"
+  name: "Moeclub ltd"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-MOECLUB]
+- asn: 207268
+  ip: "fe80::207:268"
+  name: "Strategic Explorations"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-STREXP]
+- asn: 211390
+  ip: "fe80::211:390"
+  name: "Yuzhen Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-YUZHEN]
+- asn: 201217
+  ip: "fe80::201:217"
+  name: "RADISHCLOUD TECHNOLOGY"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-RADISH]
+- asn: 138435
+  ip: "fe80::138:435"
+  name: "YuetAu Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-YUETAU]
+- asn: 142427
+  ip: "fe80::142:427"
+  name: "Meson Global Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-MESON-SELF]
+- asn: 142164
+  ip: "2404:f4c0:f70e:1980::142:164"
+  name: "GoldDoge Networks"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-142164]
+- asn: 203236
+  ip: "fe80::203:236"
+  name: "Lily Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-LILY]
+- asn: 200536
+  ip: "fe80::200:536"
+  name: "186526 Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-NET186]
+- asn: 210445
+  ip: "fe80::210:445"
+  name: "CRE Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-CRENET]
+- asn: 200895
+  ip: "fe80::200:895"
+  name: "Gua-Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
+- asn: 203899
+  ip: "fe80::203:899"
+  name: "WJY Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-WJY]
