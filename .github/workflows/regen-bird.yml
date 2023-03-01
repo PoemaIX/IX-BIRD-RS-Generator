@@ -1,0 +1,47 @@
+name: Regenerate bird
+
+on:
+  watch:
+    types: [started]
+    
+jobs:
+  repo-sync:
+    name: Repo Sync
+    runs-on: ubuntu-latest
+    env:
+      GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa"
+    steps:
+    - name: Checkout Central Actions Repo
+      uses: actions/checkout@v3
+      with:
+        path: /root/arouteserver
+    - name: setup ssh key
+      run: |
+        mkdir -p  ~/.ssh
+        echo "$SSH_KEY" > ~/.ssh/id_rsa
+        chmod 600  ~/.ssh/id_rsa
+        echo $HOME
+        echo $GITHUB_WORKSPACE
+      shell: bash
+      env:
+        SSH_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+    - name: Get current time
+      uses: gerred/actions/current-time@master
+      id: current-time
+    - name: Cache Origional files
+      id: cache
+      uses: actions/cache@v2
+      with:
+        path: |
+          /root/gitrs/KSKB-IX
+        key: I am a key for /root/gitrs/KSKB-IX at PoemaIX-BIRDGen!
+    - name: Clone from target repo
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: |
+        git clone --mirror git@github.com:KSKBpage/KSKB-IX.git /root/gitrs/KSKB-IX
+    - name: reset to KSKB-IX origin
+      run: |
+        cd  /root/gitrs/KSKB-IX
+        git fetch --all --force
+        git reset --hard origin/main
+      shell: bash
