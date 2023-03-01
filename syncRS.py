@@ -104,16 +104,17 @@ def session_to_dict(sess_info):
     return result
 
 
-RS1_info = session_to_dict(get_bird_session())
-RS1_baseurl = "https://ixlg.kskb.eu.org/__act__/192.168.16.101/"
+#RS1_birdc = requests.get("http://[2404:f4c0:f70e:1980::1:1]:3234/bird?q=show+protocols+all").text
+#RS1_info = session_to_dict(get_bird_session(birdc_output=RS1_birdc))
+#RS1_baseurl = "https://ixlg.kskb.eu.org/__act__/2404:f4c0:f70e:1980::1:1/"
 
-RS2_birdc = requests.get("http://192.168.16.102:3234/bird?q=show+protocols+all").text
-RS2_info = session_to_dict(get_bird_session(birdc_output=RS2_birdc))
-RS2_baseurl = "https://ixlg.kskb.eu.org/__act__/192.168.16.102/"
+#RS2_birdc = requests.get("http://[2404:f4c0:f70e:1980::2:1]:3234/bird?q=show+protocols+all").text
+#RS2_info = session_to_dict(get_bird_session(birdc_output=RS2_birdc))
+#RS2_baseurl = "https://ixlg.kskb.eu.org/__act__/2404:f4c0:f70e:1980::2:1/"
 
-RS3_birdc = requests.get("http://192.168.16.103:3234/bird?q=show+protocols+all").text
-RS3_info = session_to_dict(get_bird_session(birdc_output=RS3_birdc))
-RS3_baseurl = "https://ixlg.kskb.eu.org/__act__/192.168.16.103/"
+#RS3_birdc = requests.get("http://[2404:f4c0:f70e:1980::3:1]:3234/bird?q=show+protocols+all").text
+#RS3_info = session_to_dict(get_bird_session(birdc_output=RS3_birdc))
+#RS3_baseurl = "https://ixlg.kskb.eu.org/__act__/2404:f4c0:f70e:1980::3:1/"
 
 all_conf = yaml.safe_load( open("/root/arouteserver/clients_all.yml").read())
 
@@ -197,7 +198,7 @@ md_output += tomark(status)
 
 md_output += """
 <script>
-let rs_list = ["RSR1:192.168.16.101","RST:192.168.16.102"];
+let rs_list = ["RSR1:2404:f4c0:f70e:1980::1:1","RST:2404:f4c0:f70e:1980::2:1"];
 let lg_baseurl = "https://ixlg.kskb.eu.org/";
 let lg_json_api = "https://ixlgjson.poema.net.eu.org/bird?RS=";
 
@@ -209,7 +210,7 @@ function get_state_url(num,name,type,proxy_url,baseurl){
 }
 async function render_mamber_list(rs_info){
     let rs_parts = rs_info.split(':');
-    let [rs_name, proxy_url] = [rs_parts[0], rs_parts.slice(1).join(',')];
+    let [rs_name, proxy_url] = [rs_parts[0], rs_parts.slice(1).join(':')];
     let ixlg_api_resilt = await fetch(lg_json_api + rs_name);
     let clients = await ixlg_api_resilt.json();
     for (client of clients){
