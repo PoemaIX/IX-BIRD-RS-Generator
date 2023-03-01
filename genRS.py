@@ -16,11 +16,11 @@ client_as_set = [(c["asn"],c["cfg"]["filtering"]["irrdb"]["as_sets"]) for c in c
 client_as_set = {c[0]:c[1] if c[1] != [] else ["AS" + str(c[0])] for c in client_as_set}
 open("/root/gitrs/KSKB-IX/static/files/kskbix-all.yaml","w").write(yaml.safe_dump(client_as_set))
 
-RS1_birdc = requests.get("http://192.168.16.101:3234/bird?q=show+protocols+all").text
+RS1_birdc = requests.get("http://[2404:f4c0:f70e:1980::1:1]:3234/bird?q=show+protocols+all").text
 RS1_info  = get_bird_session(birdc_output=RS1_birdc)
 RS1_estab = set(map(lambda x:x["as"]["remote"],filter(lambda x:x["state"] == "Established" and x["route"]["ipv6"]["imported"] > 0 ,RS1_info)))
 
-RS2_birdc = requests.get("http://192.168.16.102:3234/bird?q=show+protocols+all").text
+RS2_birdc = requests.get("http://[2404:f4c0:f70e:1980::2:1]:3234/bird?q=show+protocols+all").text
 RS2_info  = get_bird_session(birdc_output=RS2_birdc)
 RS2_estab = set(map(lambda x:x["as"]["remote"],filter(lambda x:x["state"] == "Established" and x["route"]["ipv6"]["imported"] > 0 ,RS2_info)))
 
