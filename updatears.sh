@@ -13,7 +13,6 @@ scripts/arouteserver bird -o /root/arouteserver/bird_rs1.conf.out --target-versi
 mv /root/arouteserver/bird_rs1.conf.out /root/arouteserver/bird_rs1.conf
 
 # scripts/arouteserver ixf-member-export --clients /root/arouteserver/clients_rs1.yml "KSKB-IX" 1 | sed "s/fe80::/2404:f4c0:f70e:1980::/g" > /root/gitrs/KSKB-IX/static/files/ix-f.json
-/root/arouteserver/genIXPF.py | sed "s/fe80::/2404:f4c0:f70e:1980::/g" > /root/gitrs/KSKB-IX/static/files/ix-f.json
 
 
 
