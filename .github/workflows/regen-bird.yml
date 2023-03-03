@@ -25,7 +25,7 @@ jobs:
       run: |
         sudo chmod 777 /root
         mkdir -p /root/.ssh
-        sudo chown "$USER" /root/.ssh
+        sudo chown -R "$USER" /root/
         echo "$SSH_KEY_IXPAGE" > /root/.ssh/id_rsa_ixpage
         chmod 600  /root/.ssh/id_rsa_ixpage
         echo "$SSH_KEY_ARS" > /root/.ssh/id_rsa_ars
@@ -93,7 +93,7 @@ jobs:
         
     - name: regenerate bird config and ix-f.json
       run: |
-        sudo pip3 install -r /root/gitrs/ars/requirements.txt
+        pip3 install -r /root/gitrs/ars/requirements.txt
         /root/arouteserver/updatears.sh
       env:
         SECRET_PEERINGDB_API_KEY: ${{secrets.SECRET_PEERINGDB_API_KEY}}
