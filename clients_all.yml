@@ -168,7 +168,7 @@ clients:
       irrdb:
         as_sets: [AS149835:AS-ALL]
 - asn: 60326
-  ip: "fe80::60:326"
+  ip: "2404:f4c0:f70e:1980::60:326"
   name: "MrSheepNET"
   cfg:
     filtering:
@@ -378,3 +378,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-WJY]
+- asn: 199613
+  ip: "fe80::199:613"
+  name: "Bling Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [ARIN::AS-BLING]

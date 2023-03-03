@@ -109,7 +109,8 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: []
+        as_sets:
+        - RIPE::AS-86
 - asn: 210932
   ip: fe80::210:932
   cfg:
@@ -158,7 +159,7 @@ clients:
         as_sets:
         - AS149835:AS-ALL
 - asn: 60326
-  ip: fe80::60:326
+  ip: 2404:f4c0:f70e:1980::60:326
   cfg:
     filtering:
       irrdb:
@@ -360,3 +361,10 @@ clients:
       irrdb:
         as_sets:
         - AS-WJY
+- asn: 199613
+  ip: fe80::199:613
+  cfg:
+    filtering:
+      irrdb:
+        as_sets:
+        - ARIN::AS-BLING
