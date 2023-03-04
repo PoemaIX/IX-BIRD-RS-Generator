@@ -1,6 +1,6 @@
 clients:
 - asn: 138517
-  name: "Poema Network(KSKB-IX)"
+  name: "Poema Network"
   ip: "fe80::1000:138:517"
   cfg:
     filtering:
@@ -385,3 +385,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [ARIN::AS-BLING]
+- asn: 199683
+  ip: "fe80::199:683"
+  name: "Eki Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS199683:AS-NTT]

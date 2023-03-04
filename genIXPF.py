@@ -33,7 +33,41 @@ ixp_list = [{
 }]
 
 # prepare member_list data
-member_list = []
+member_list = [
+  {
+    "asnum": 199594,
+    "connection_list": [
+      {
+        "ixp_id": 0,
+        "state": "active",
+        "if_list": [
+          {
+            "if_speed": 250,
+            "switch_id": 1
+          }
+        ],
+        "vlan_list": [
+          {
+            "vlan_id": 0,
+            "ipv6": {
+              "address": "2404:f4c0:f70e:1980::1:1",
+              "as_macro": "AS-KSKB-IX-RS1",
+              "routeserver": True
+            }
+          },
+          {
+            "vlan_id": 0,
+            "ipv6": {
+              "address": "2404:f4c0:f70e:1980::2:1",
+              "as_macro": "AS-KSKB-IX-RS2",
+              "routeserver": True
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
 for ci in range(len(client["clients"])):
     asnum = client["clients"][ci]["asn"]
     as_macros = client["clients"][ci]["cfg"]["filtering"]["irrdb"]["as_sets"]
