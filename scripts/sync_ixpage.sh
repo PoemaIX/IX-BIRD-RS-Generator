@@ -21,6 +21,7 @@ while [ "$1" != "" ]; do
 done
 
 if [ "$build_mkdocs" = "1" ]; then
+  export PATH=`python3 -m site --user-base`/bin:$PATH
   mkdocs build
   gzip -f -n -k site/sitemap.xml
 fi

@@ -43,13 +43,15 @@ jobs:
         SSH_KEY_IXPAGE: ${{secrets.SSH_KEY_IXPAGE}}
         SSH_KEY_ARS: ${{secrets.SSH_KEY_ARS}}
         IXLAN_OVPN_CONF: ${{secrets.IXLAN_OVPN_ASSET_CONF}}
-    - name: Cache /root/.local/lib files
+    - name: Cache /root/.local/items files
       id: cache_pip
       uses: actions/cache@v2
       with:
         path: |
           /root/.local/lib
-        key: /root/.local/lib at PoemaIX-BIRDGen asset
+          /root/.local/bin
+          /root/.local/share
+        key: /root/.local/items at PoemaIX-BIRDGen asset
     - name: Install depends
       run: sudo apt-get install -y bgpq4 openvpn net-tools
     - name: connect to openvpn
