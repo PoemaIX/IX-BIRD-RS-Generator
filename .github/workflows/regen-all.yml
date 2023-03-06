@@ -67,7 +67,8 @@ jobs:
       with:
         path: |
           /root/gitrs
-        key: /root/gitrs at PoemaIX-BIRDGen all
+          /root/arouteserver/cache
+        key: /root/gitrs at PoemaIX-BIRDGen all v2
     - name: Sync from /root/gitrs
       if: steps.cache_ix_page.outputs.cache-hit != 'true'
       run: |

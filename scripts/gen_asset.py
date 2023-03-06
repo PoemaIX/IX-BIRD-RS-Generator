@@ -29,7 +29,7 @@ RS2_estab = set(map(lambda x:x["as"]["remote"],filter(lambda x:x["state"] == "Es
 expire = 86400
 
 irr_cache = {}
-irr_cache_path = "/root/arouteserver/scripts/irr_cache.json"
+irr_cache_path = "/root/arouteserver/cache/irr_cache.json"
 if os.path.isfile(irr_cache_path):
     try:
         irr_cache = json.loads(open(irr_cache_path).read())

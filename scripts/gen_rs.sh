@@ -3,6 +3,9 @@ export PYTHONPATH=/root/gitrs/ars
 set -x
 cd /root/gitrs/ars
 set -e
+
+cp /root/arouteserver/scripts/__pycache__/.gitignore /root/arouteserver/cache/.gitignore
+
 /root/arouteserver/scripts/gen_rs.py 2
 cp /root/arouteserver/clients_rs2.yml /root/arouteserver/clients.yml
 scripts/arouteserver bird -o /root/arouteserver/bird_rs2.conf.out --target-version 2.0.8
