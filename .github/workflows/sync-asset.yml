@@ -67,6 +67,7 @@ jobs:
       with:
         path: |
           /root/gitrs
+          /root/arouteserver/cache
         key: /root/gitrs at PoemaIX-BIRDGen asset
     - name: Sync from /root/gitrs
       if: steps.cache_ix_page.outputs.cache-hit != 'true'
