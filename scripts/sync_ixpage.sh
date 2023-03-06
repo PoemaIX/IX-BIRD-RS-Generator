@@ -9,6 +9,22 @@ git reset --hard origin/main
 DATE=$(date +'%Y-%m-%d %H:%M:%S')
 GIT_LAST_MSG=$(git log -1 --pretty=%B)
 GIT_DIFF=$(git diff)
+
+build_mkdocs=
+
+while [ "$1" != "" ]; do
+    case $1 in
+        -b | --build )    build_mkdocs=1
+                                ;;
+    esac
+    shift
+done
+
+if [ "$build_mkdocs" = "1" ]; then
+  mkdocs build
+  gzip -f -n -k site/sitemap.xml
+fi
+
 git add -A
 if  [[ $GIT_LAST_MSG == "sync members at"* ]] ;
 then

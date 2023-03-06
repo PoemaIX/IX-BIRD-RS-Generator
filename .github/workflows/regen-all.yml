@@ -14,6 +14,7 @@ jobs:
   repo-sync:
     name: Regenerate All config
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     env:
       GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa"
     steps:
@@ -100,10 +101,11 @@ jobs:
       
     - name: push ixpage back
       run: |
+        pip3 install mkdocs-bootswatch pymdown-extensions mkdocs-material jieba
         git config --global user.email si@kskb.eu.org
         git config --global user.name KusakabeSi
         /root/arouteserver/scripts/sync_asset.sh
-        /root/arouteserver/scripts/sync_ixpage.sh
+        /root/arouteserver/scripts/sync_ixpage.sh -b
       env:
         HOME: /root
         RIPE_PASSWD: ${{secrets.RIPE_PASSWD}}
