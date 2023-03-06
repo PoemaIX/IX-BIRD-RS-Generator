@@ -10,6 +10,8 @@ from bird_parser import get_bird_session
 client = yaml.safe_load( open("/root/arouteserver/clients_all.yml").read())
 yaml.SafeDumper.ignore_aliases = lambda self, data: True
 
+t1_asns = [ 701, 1239, 1299, 2914, 3257, 3320, 3356, 3491, 5511, 6453, 6461, 6762, 6830, 7018, 12956, 174, 1273, 2828, 4134, 4809, 4637, 6939, 7473, 7922, 9002 ]
+
 # get all as-set
 client_list = client["clients"]
 client_as_set = [(c["asn"],c["cfg"]["filtering"]["irrdb"]["as_sets"]) for c in client_list]
@@ -33,10 +35,10 @@ if os.path.isfile(irr_cache_path):
         irr_cache = json.loads(open(irr_cache_path).read())
     except:
         irr_cache = {}
-def getlen(as_set_all,af):
+def getinfo(as_set_all,af):
     if as_set_all in irr_cache and ( irr_cache[as_set_all]["time"] + expire ) > time.time():
         #print(as_set_all,irr_cache[as_set_all]["result"])
-        return irr_cache[as_set_all]["result"]
+        return irr_cache[as_set_all]
     # irrdb = "RIPE,APNIC,AFRINIC,ARIN,LACNIC" # "RIPE,APNIC,AFRINIC,ARIN,NTTCOM,ALTDB,BBOI,BELL,JPIRR,LEVEL3,RADB,TC" 
     irrdb = "RIPE,APNIC,AFRINIC,ARIN,NTTCOM,ALTDB,BBOI,BELL,JPIRR,LEVEL3,RADB,TC" 
     as_set = as_set_all
@@ -48,10 +50,11 @@ def getlen(as_set_all,af):
     asset_asns = json.loads(bgpq4_asns)["NN"]
     irr_cache[as_set_all] = {}
     irr_cache[as_set_all]["ASNs"] = asset_asns
-    irr_cache[as_set_all]["result"] = max(0,len(bgpq4_out.stdout.decode().split("\n"))-2)
+    irr_cache[as_set_all]["prefix_num"] = max(0,len(bgpq4_out.stdout.decode().split("\n"))-2)
     irr_cache[as_set_all]["time"] = time.time()
+    irr_cache[as_set_all]["t1_asns"] = sorted(set(asset_asns) & set(t1_asns))
     #print(as_set_all,irr_cache[as_set_all]["result"])
-    return irr_cache[as_set_all]["result"]
+    return irr_cache[as_set_all]
 
 as_sets_all = {}
 as_sets_estab = {}
@@ -82,8 +85,12 @@ if sys.argv[1] == "2":
         the_asn = client["clients"][ci]["asn"]
         as_sets_new = []
         for as_set in client["clients"][ci]["cfg"]["filtering"]["irrdb"]["as_sets"]:
-            if getlen(as_set,6) <= 100:
+            as_set_info = getinfo(as_set,6)
+            if as_set_info["prefix_num"] <= 100 and as_set_info["t1_asns"] == []:
                 as_sets_new += [as_set]
+            else:
+                if as_set_info["t1_asns"] != []:
+                    print("Warning:",as_set ,"contains t1_asns:",as_set_info["t1_asns"])
         asset_info = {"asn": the_asn}
         asset_info["as-set"] = as_sets_new if len(as_sets_new) > 0 else ["AS" + str(the_asn)]
         asset_info["as-set-flat"] = []
@@ -101,9 +108,16 @@ if sys.argv[1] == "2":
 if sys.argv[1] == "1":
     for ci in range(len(client["clients"])):
         the_asn = client["clients"][ci]["asn"]
-        my_as_sets = client["clients"][ci]["cfg"]["filtering"]["irrdb"]["as_sets"]
+        as_sets_new = []
+        for as_set in client["clients"][ci]["cfg"]["filtering"]["irrdb"]["as_sets"]:
+            as_set_info = getinfo(as_set,6)
+            if as_set_info["t1_asns"] == []:
+                as_sets_new += [as_set]
+            else:
+                if as_set_info["t1_asns"] != []:
+                    print("Warning:",as_set ,"contains t1_asns:",as_set_info["t1_asns"])
         asset_info = {"asn": the_asn}
-        asset_info["as-set"] = my_as_sets if len(my_as_sets) > 0 else ["AS" + str(the_asn)]
+        asset_info["as-set"] = as_sets_new if len(as_sets_new) > 0 else ["AS" + str(the_asn)]
         asset_info["as-set-flat"] = []
         for asset in asset_info["as-set"]:
             asset_info["as-set-flat"] += irr_cache[asset]["ASNs"] if asset in irr_cache else [the_asn]
