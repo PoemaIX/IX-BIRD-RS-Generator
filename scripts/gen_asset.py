@@ -27,7 +27,7 @@ RS2_estab = set(map(lambda x:x["as"]["remote"],filter(lambda x:x["state"] == "Es
 expire = 86400
 
 irr_cache = {}
-irr_cache_path = "irr_cache.json"
+irr_cache_path = "/root/arouteserver/scripts/irr_cache.json"
 if os.path.isfile(irr_cache_path):
     try:
         irr_cache = json.loads(open(irr_cache_path).read())
@@ -35,7 +35,7 @@ if os.path.isfile(irr_cache_path):
         irr_cache = {}
 def getlen(as_set_all,af):
     if as_set_all in irr_cache and ( irr_cache[as_set_all]["time"] + expire ) > time.time():
-        print(as_set_all,irr_cache[as_set_all]["result"])
+        #print(as_set_all,irr_cache[as_set_all]["result"])
         return irr_cache[as_set_all]["result"]
     # irrdb = "RIPE,APNIC,AFRINIC,ARIN,LACNIC" # "RIPE,APNIC,AFRINIC,ARIN,NTTCOM,ALTDB,BBOI,BELL,JPIRR,LEVEL3,RADB,TC" 
     irrdb = "RIPE,APNIC,AFRINIC,ARIN,NTTCOM,ALTDB,BBOI,BELL,JPIRR,LEVEL3,RADB,TC" 
@@ -50,7 +50,7 @@ def getlen(as_set_all,af):
     irr_cache[as_set_all]["ASNs"] = asset_asns
     irr_cache[as_set_all]["result"] = max(0,len(bgpq4_out.stdout.decode().split("\n"))-2)
     irr_cache[as_set_all]["time"] = time.time()
-    print(as_set_all,irr_cache[as_set_all]["result"])
+    #print(as_set_all,irr_cache[as_set_all]["result"])
     return irr_cache[as_set_all]["result"]
 
 as_sets_all = {}
@@ -74,18 +74,16 @@ def merge_dict_list(dl):
                 else:
                     dr[k] += [v]
     for k,v in dr.items():
-        dr[k] = list(set(v))
+        dr[k] = list(dict.fromkeys(v).keys())
     return dr
 
 if sys.argv[1] == "2":
     for ci in range(len(client["clients"])):
         the_asn = client["clients"][ci]["asn"]
-        del  client["clients"][ci]["name"]
         as_sets_new = []
         for as_set in client["clients"][ci]["cfg"]["filtering"]["irrdb"]["as_sets"]:
             if getlen(as_set,6) <= 100:
                 as_sets_new += [as_set]
-        client["clients"][ci]["cfg"]["filtering"]["irrdb"]["as_sets"] = as_sets_new
         asset_info = {"asn": the_asn}
         asset_info["as-set"] = as_sets_new if len(as_sets_new) > 0 else ["AS" + str(the_asn)]
         asset_info["as-set-flat"] = []
@@ -98,18 +96,11 @@ if sys.argv[1] == "2":
     as_sets_estab_all = merge_dict_list(as_sets_estab.values())
     as_sets_all["all"] = as_sets_all_all
     as_sets_estab["all"] = as_sets_estab_all
-    client_rs2_txt = yaml.safe_dump(client, sort_keys=False)
-    open("/root/arouteserver/clients_rs2.yml","w").write(client_rs2_txt)
     open("/root/gitrs/KSKB-IX/static/files/kskbix-rs2.yaml","w").write(yaml.safe_dump(as_sets_all))
     open("/root/gitrs/KSKB-IX/static/files/kskbix-rs2-estab.yaml","w").write(yaml.safe_dump(as_sets_estab))
 if sys.argv[1] == "1":
     for ci in range(len(client["clients"])):
         the_asn = client["clients"][ci]["asn"]
-        del  client["clients"][ci]["name"]
-        client["clients"][ci]["cfg"]["filtering"]["irrdb"].pop("enforce_origin_in_as_set",None)
-        client["clients"][ci]["cfg"]["filtering"]["irrdb"].pop("enforce_prefix_in_as_set",None)
-        client["clients"][ci]["cfg"]["filtering"].pop("transit_free",None)
-        client["clients"][ci]["cfg"]["filtering"].pop("max_prefix",None)
         my_as_sets = client["clients"][ci]["cfg"]["filtering"]["irrdb"]["as_sets"]
         asset_info = {"asn": the_asn}
         asset_info["as-set"] = my_as_sets if len(my_as_sets) > 0 else ["AS" + str(the_asn)]
@@ -123,8 +114,6 @@ if sys.argv[1] == "1":
     as_sets_estab_all = merge_dict_list(as_sets_estab.values())
     as_sets_all["all"] = as_sets_all_all
     as_sets_estab["all"] = as_sets_estab_all
-    client_rs1_txt = yaml.safe_dump(client, sort_keys=False)
-    open("/root/arouteserver/clients_rs1.yml","w").write(client_rs1_txt)
     open("/root/gitrs/KSKB-IX/static/files/kskbix-rs1.yaml","w").write(yaml.safe_dump(as_sets_all))
     open("/root/gitrs/KSKB-IX/static/files/kskbix-rs1-estab.yaml","w").write(yaml.safe_dump(as_sets_estab))
 open(irr_cache_path,"w").write(json.dumps(irr_cache,indent=4))

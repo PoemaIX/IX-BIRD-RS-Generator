@@ -1,0 +1,112 @@
+name: Regenerate asset
+
+on:
+  watch:
+    types: [started]
+  schedule:
+    - cron:  '30 * * * *'
+
+concurrency: 
+  group: "PoemaIX-BIRDGen"
+  cancel-in-progress: false
+
+jobs:
+  repo-sync:
+    name: Regenerate asset
+    runs-on: ubuntu-latest
+    env:
+      GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa"
+    steps:
+    - name: Checkout Central Actions Repo
+      uses: actions/checkout@v3
+    - name: symlink to /root/arouteserver
+      run: |
+        sudo chmod 777 /root
+        ln -s $GITHUB_WORKSPACE /root/arouteserver
+    - name: setup ssh key
+      run: |
+        sudo chmod 777 /root
+        mkdir -p /root/.ssh
+        sudo chown -R "$USER" /root/
+        echo "$SSH_KEY_IXPAGE" > /root/.ssh/id_rsa_ixpage
+        chmod 600  /root/.ssh/id_rsa_ixpage
+        echo "$SSH_KEY_ARS" > /root/.ssh/id_rsa_ars
+        chmod 600  /root/.ssh/id_rsa_ars
+        echo "$IXLAN_OVPN_CONF" > /root/.ssh/ovpn-kskb-ix.conf
+        git config --global user.email si@kskb.eu.org
+        git config --global user.name KusakabeSi
+        echo $HOME
+        echo $GITHUB_WORKSPACE
+      shell: bash
+      env:
+        SSH_KEY_IXPAGE: ${{secrets.SSH_KEY_IXPAGE}}
+        SSH_KEY_ARS: ${{secrets.SSH_KEY_ARS}}
+        IXLAN_OVPN_CONF: ${{secrets.IXLAN_OVPN_ASSET_CONF}}
+    - name: Cache /root/.local/lib files
+      id: cache_pip
+      uses: actions/cache@v2
+      with:
+        path: |
+          /root/.local/lib
+        key: /root/.local/lib at PoemaIX-BIRDGen asset
+    - name: Install depends
+      run: sudo apt-get install -y bgpq4 openvpn net-tools
+    - name: connect to openvpn
+      run: |
+        sudo openvpn --daemon --config /root/.ssh/ovpn-kskb-ix.conf
+    - name: Get current time
+      uses: gerred/actions/current-time@master
+      id: current-time
+
+    - name: Cache /root/gitrs files
+      id: cache_ix_page
+      uses: actions/cache@v2
+      with:
+        path: |
+          /root/gitrs
+        key: /root/gitrs at PoemaIX-BIRDGen asset
+    - name: Sync from /root/gitrs
+      if: steps.cache_ix_page.outputs.cache-hit != 'true'
+      run: |
+        export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
+        git clone git@github.com:KSKBpage/KSKB-IX.git /root/gitrs/KSKB-IX
+        export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ars"
+        git clone git@github.com:KusakabeShi/arouteserver.git /root/gitrs/ars
+        git clone https://github.com/KusakabeShi/RIPE-AS-SET-SYNC.git /root/gitrs/RIPE-AS-SET-SYNC
+    - name: reset to girts origin
+      run: |
+        export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
+        cd  /root/gitrs/KSKB-IX
+        git fetch --all --force
+        git reset --hard origin/main
+        export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ars"
+        cd  /root/gitrs/ars
+        git fetch --all --force
+        git reset --hard origin/KSKB-IX
+        cd  /root/gitrs/RIPE-AS-SET-SYNC
+        cd  /root/gitrs/KSKB-IX
+        git fetch --all --force
+        git reset --hard origin/main
+
+
+      
+    - name: push ixpage back
+      run: |
+        git config --global user.email si@kskb.eu.org
+        git config --global user.name KusakabeSi
+        /root/arouteserver/scripts/sync_asset.sh
+      env:
+        HOME: /root
+        RIPE_PASSWD: ${{secrets.RIPE_PASSWD}}
+        GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
+      shell: bash
+    - name: Commit
+      run: |
+        cd $GITHUB_WORKSPACE
+        git add -A
+        git diff-index --quiet HEAD || git commit -m "update" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: master
