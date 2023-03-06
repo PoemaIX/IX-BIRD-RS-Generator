@@ -260,6 +260,18 @@ clients:
       irrdb:
         as_sets:
         - AS-MUILTIES
+      never_via_route_servers:
+        peering_db: false
+        asns: []
+      rpki_bgp_origin_validation:
+        enabled: false
+        reject_invalid: false
+      ipv4_pref_len:
+        min: 0
+        max: 24
+      ipv6_pref_len:
+        min: 0
+        max: 48
 - asn: 200105
   ip: fe80::200:105
   cfg:

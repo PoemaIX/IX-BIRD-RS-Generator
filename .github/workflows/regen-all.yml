@@ -1,8 +1,10 @@
-name: Regenerate bird
+name: Regenerate All config
 
 on:
   watch:
     types: [started]
+  schedule:
+    - cron:  '0 0 * * *'
 
 concurrency: 
   group: "PoemaIX-BIRDGen"
@@ -10,7 +12,7 @@ concurrency:
 
 jobs:
   repo-sync:
-    name: Repo Sync
+    name: Regenerate All config
     runs-on: ubuntu-latest
     env:
       GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa"
@@ -40,6 +42,13 @@ jobs:
         SSH_KEY_IXPAGE: ${{secrets.SSH_KEY_IXPAGE}}
         SSH_KEY_ARS: ${{secrets.SSH_KEY_ARS}}
         IXLAN_OVPN_CONF: ${{secrets.IXLAN_OVPN_CONF}}
+    - name: Cache /root/.local/lib files
+      id: cache_pip
+      uses: actions/cache@v2
+      with:
+        path: |
+          /root/.local/lib
+        key: /root/.local/lib at PoemaIX-BIRDGen all
     - name: Install depends
       run: sudo apt-get install -y bgpq4 openvpn net-tools
     - name: connect to openvpn
@@ -48,53 +57,42 @@ jobs:
     - name: Get current time
       uses: gerred/actions/current-time@master
       id: current-time
-      
-    - name: Cache /root/gitrs/KSKB-IX files
+
+    - name: Cache /root/gitrs files
       id: cache_ix_page
       uses: actions/cache@v2
       with:
         path: |
-          /root/gitrs/KSKB-IX
-        key: I am a key for /root/gitrs/KSKB-IX at PoemaIX-BIRDGen v2!
-    - name: Sync from /root/gitrs/KSKB-IX
+          /root/gitrs
+        key: /root/gitrs at PoemaIX-BIRDGen all
+    - name: Sync from /root/gitrs
       if: steps.cache_ix_page.outputs.cache-hit != 'true'
       run: |
+        export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
         git clone git@github.com:KSKBpage/KSKB-IX.git /root/gitrs/KSKB-IX
-      env:
-        GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
-    - name: reset to KSKB-IX origin
+        export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ars"
+        git clone git@github.com:KusakabeShi/arouteserver.git /root/gitrs/ars
+        git clone https://github.com/KusakabeShi/RIPE-AS-SET-SYNC.git /root/gitrs/RIPE-AS-SET-SYNC
+    - name: reset to girts origin
       run: |
+        export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
         cd  /root/gitrs/KSKB-IX
         git fetch --all --force
         git reset --hard origin/main
-      env:
-        GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
-        
-    - name: Cache /root/gitrs/ars files
-      id: cache_ars
-      uses: actions/cache@v2
-      with:
-        path: |
-          /root/gitrs/ars
-        key: I am a key for /root/gitrs/ars at PoemaIX-BIRDGen v2!
-    - name: Sync from /root/gitrs/ars
-      if: steps.cache_ars.outputs.cache-hit != 'true'
-      run: |
-        git clone git@github.com:KusakabeShi/arouteserver.git /root/gitrs/ars
-      env:
-        GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ars"
-    - name: reset to ars origin
-      run: |
+        export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ars"
         cd  /root/gitrs/ars
         git fetch --all --force
         git reset --hard origin/KSKB-IX
-      env:
-        GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ars"
-        
-    - name: regenerate bird config and ix-f.json
+        cd  /root/gitrs/RIPE-AS-SET-SYNC
+        cd  /root/gitrs/KSKB-IX
+        git fetch --all --force
+        git reset --hard origin/main
+
+
+    - name: regenerate bird config
       run: |
         pip3 install -r /root/gitrs/ars/requirements.txt
-        /root/arouteserver/updatears.sh
+        /root/arouteserver/scripts/gen_rs.sh
       env:
         SECRET_PEERINGDB_API_KEY: ${{secrets.SECRET_PEERINGDB_API_KEY}}
         HOME: /root
@@ -104,22 +102,14 @@ jobs:
       run: |
         git config --global user.email si@kskb.eu.org
         git config --global user.name KusakabeSi
-        /root/arouteserver/sync_ixpage.sh
+        /root/arouteserver/scripts/sync_asset.sh
+        /root/arouteserver/scripts/sync_ixpage.sh
       env:
         HOME: /root
+        RIPE_PASSWD: ${{secrets.RIPE_PASSWD}}
         GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
       shell: bash
-    - name: push ars back
-      run: |
-        cd  /root/gitrs/ars
-        git add -A
-        git diff-index --quiet HEAD || git commit -m "update"
-        git push
-      env:
-        HOME: /root
-        GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ars"
-      shell: bash
-    - name: Commit #upload new refresh_token
+    - name: Commit
       run: |
         cd $GITHUB_WORKSPACE
         git add -A
@@ -128,4 +118,4 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: main
+        branch: master
