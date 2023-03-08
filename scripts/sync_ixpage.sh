@@ -21,6 +21,7 @@ while [ "$1" != "" ]; do
 done
 
 if [ "$build_mkdocs" = "1" ]; then
+  export SOURCE_DATE_EPOCH=$(date -d "$(git -C /root/gitrs/KSKB-IX log -1 --pretty="format:%ci" docs)"  +"%s")
   export PATH=`python3 -m site --user-base`/bin:$PATH
   mkdocs build
   gzip -f -n -k site/sitemap.xml
