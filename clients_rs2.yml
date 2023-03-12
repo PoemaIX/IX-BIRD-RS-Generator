@@ -393,3 +393,10 @@ clients:
       irrdb:
         as_sets:
         - AS199683:AS-NTT
+- asn: 212168
+  ip: fe80::212:168
+  cfg:
+    filtering:
+      irrdb:
+        as_sets:
+        - AS212168:AS-PRPR
