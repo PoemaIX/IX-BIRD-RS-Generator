@@ -66,7 +66,7 @@ clients:
         as_sets:
         - AS209306:AS-SET
 - asn: 140913
-  ip: fe80::140:913
+  ip: 2404:f4c0:f70e:1980::140:913
   cfg:
     filtering:
       irrdb:
