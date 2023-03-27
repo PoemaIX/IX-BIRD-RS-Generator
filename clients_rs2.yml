@@ -311,13 +311,6 @@ clients:
       irrdb:
         as_sets:
         - AS-STREXP
-- asn: 211390
-  ip: fe80::211:390
-  cfg:
-    filtering:
-      irrdb:
-        as_sets:
-        - AS-YUZHEN
 - asn: 201217
   ip: fe80::201:217
   cfg:
