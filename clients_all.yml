@@ -15,11 +15,11 @@ clients:
         as_sets: [AS-JKNET]
 - asn: 51930
   name: "Haonan Yang"
-  ip: "fe80::51:930"
+  ip: "2404:f4c0:f70e:1980::57:481"
   cfg:
     filtering:
       irrdb:
-        as_sets: [AS-AUGUST]
+        as_sets: []
 - asn: 210320
   ip: "fe80::210:320"
   name: "ZH Innovation Network"
