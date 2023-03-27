@@ -13,7 +13,7 @@ clients:
       irrdb:
         as_sets:
         - AS-JKNET
-- asn: 51930
+- asn: 57481
   ip: 2404:f4c0:f70e:1980::57:481
   cfg:
     filtering:
