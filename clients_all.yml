@@ -153,13 +153,6 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-MERCYCLOUD]
-- asn: 140506
-  ip: "fe80::140:506"
-  name: "ZR Global Network"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: []
 - asn: 149835
   ip: "fe80::149:835"
   name: "HUAJINET Internet"
