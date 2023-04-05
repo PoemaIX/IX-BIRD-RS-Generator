@@ -250,8 +250,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-MUILTIES
+        as_sets: []
         enforce_origin_in_as_set: false
         enforce_prefix_in_as_set: false
       transit_free:
