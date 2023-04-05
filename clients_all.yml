@@ -407,3 +407,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS212168:AS-PRPR]
+- asn: 199656
+  ip: "fe80::199:656"
+  name: "ZYC Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS199656:AS-ZYC]
