@@ -414,3 +414,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS199656:AS-ZYC]
+- asn: 199632
+  ip: "fe80::199:632"
+  name: "Decima LLC"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS199632:AS-DECIMA]
