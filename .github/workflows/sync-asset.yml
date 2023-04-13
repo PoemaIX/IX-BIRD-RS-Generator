@@ -1,8 +1,17 @@
 name: Regenerate asset
 
 on:
-  issues:
-    types: [closed]
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
   schedule:
     - cron:  '30 * * * *'
 
@@ -91,10 +100,8 @@ jobs:
         cd  /root/gitrs/KSKB-IX
         git fetch --all --force
         git reset --hard origin/main
-
-
       
-    - name: push ixpage back
+    - name: update ixpf, member_page, push ixpage back
       run: |
         pip3 install mkdocs-bootswatch pymdown-extensions mkdocs-material jieba
         git config --global user.email si@kskb.eu.org
