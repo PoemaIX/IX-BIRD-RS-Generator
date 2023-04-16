@@ -401,3 +401,9 @@ clients:
       irrdb:
         as_sets:
         - AS199632:AS-DECIMA
+- asn: 139888
+  ip: 2404:f4c0:f70e:1980::139:888
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
