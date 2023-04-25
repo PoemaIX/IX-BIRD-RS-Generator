@@ -399,7 +399,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: [AS199683:AS-NTT]
+        as_sets: [AS199683:AS-SET]
 - asn: 212168
   ip: "fe80::212:168"
   name: "prprCloud Limited"
