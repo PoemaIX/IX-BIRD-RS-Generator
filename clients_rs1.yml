@@ -1,6 +1,6 @@
 clients:
 - asn: 138517
-  ip: fe80::1000:138:517
+  ip: fe80::138:517
   cfg:
     filtering:
       irrdb:
