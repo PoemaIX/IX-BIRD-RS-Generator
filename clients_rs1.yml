@@ -403,3 +403,9 @@ clients:
     filtering:
       irrdb:
         as_sets: []
+- asn: 150184
+  ip: fe80::150:184
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
