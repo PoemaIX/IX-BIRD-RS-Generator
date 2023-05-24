@@ -20,13 +20,6 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-- asn: 210320
-  ip: "fe80::210:320"
-  name: "ZH Innovation Network"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: [AS-ZH-NET]
 - asn: 213262
   ip: "fe80::213:262"
   name: "Moe Overflow Electric"
