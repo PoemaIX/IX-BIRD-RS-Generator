@@ -205,7 +205,8 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: []
+        as_sets:
+        - AS-MLGT
 - asn: 203314
   ip: fe80::203:314
   cfg:
