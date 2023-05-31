@@ -428,3 +428,10 @@ clients:
     filtering:
       irrdb:
         as_sets: []
+- asn: 212623
+  ip: fe80::212:623
+  name: "23751 NET"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS212623:AS-INPRTX]
