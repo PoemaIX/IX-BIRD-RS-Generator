@@ -52,7 +52,7 @@ jobs:
         SSH_KEY_IXPAGE: ${{secrets.SSH_KEY_IXPAGE}}
         SSH_KEY_ARS: ${{secrets.SSH_KEY_ARS}}
         IXLAN_OVPN_CONF: ${{secrets.IXLAN_OVPN_CONF}}
-    - name: Cache /root/.local/items files
+    - name: Cache /root/.local 20230605
       id: cache_pip
       uses: actions/cache@v2
       with:
@@ -70,7 +70,7 @@ jobs:
       uses: gerred/actions/current-time@master
       id: current-time
 
-    - name: Cache /root/gitrs files
+    - name: Cache /root/gitrs 20230605
       id: cache_ix_page
       uses: actions/cache@v2
       with:
