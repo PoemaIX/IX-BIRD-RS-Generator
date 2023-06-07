@@ -84,7 +84,8 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: []
+        as_sets:
+        - RIPE::AS-TOHUNET
 - asn: 142281
   ip: fe80::142:281
   cfg:
@@ -239,7 +240,8 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: []
+        as_sets:
+        - AS-ZERODISTANCE
 - asn: 205329
   ip: 2404:f4c0:f70e:1980::205:329
   cfg:
