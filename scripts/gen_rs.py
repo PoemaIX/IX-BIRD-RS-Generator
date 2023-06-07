@@ -59,10 +59,10 @@ if sys.argv[1] == "2":
         for as_set in client["clients"][ci]["cfg"]["filtering"]["irrdb"]["as_sets"]:
             as_set_info = getinfo(as_set,6)
             if int(the_asn) in stuix_members:
-                if "transit_free" not in client["clients"][ci]["cfg"]["filtering"]:
-                    client["clients"][ci]["cfg"]["filtering"]["transit_free"] = {"asns": [the_asn]}
+                if "attach_custom_communities" not in client["clients"][ci]["cfg"]:
+                    client["clients"][ci]["cfg"]["attach_custom_communities"] = ["as_path_contains_transit"]
                 else:
-                    client["clients"][ci]["cfg"]["filtering"]["transit_free"]["asns"] =  [the_asn]
+                    client["clients"][ci]["cfg"]["attach_custom_communities"] +=  ["as_path_contains_transit"]
             elif as_set_info["prefix_num"] <= 100 and as_set_info["t1_asns"] == []:
                 as_sets_new += [as_set]
             else:
