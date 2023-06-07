@@ -11,8 +11,10 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-JKNET
+        as_sets: []
+      transit_free:
+        asns:
+        - 207705
 - asn: 57481
   ip: 2404:f4c0:f70e:1980::57:481
   cfg:
@@ -32,13 +34,18 @@ clients:
     filtering:
       irrdb:
         as_sets: []
+      transit_free:
+        asns:
+        - 61302
 - asn: 141237
   ip: 2404:f4c0:f70e:1980::141:237
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-MOEC
+        as_sets: []
+      transit_free:
+        asns:
+        - 141237
 - asn: 139317
   ip: fe80::139:317
   cfg:
@@ -84,8 +91,10 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - RIPE::AS-TOHUNET
+        as_sets: []
+      transit_free:
+        asns:
+        - 140731
 - asn: 142281
   ip: fe80::142:281
   cfg:
@@ -111,8 +120,10 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-CHESSKUO
+        as_sets: []
+      transit_free:
+        asns:
+        - 210932
 - asn: 134478
   ip: fe80::134:478
   cfg:
@@ -124,15 +135,19 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-LEKO
+        as_sets: []
+      transit_free:
+        asns:
+        - 212357
 - asn: 17415
   ip: 2404:f4c0:f70e:1980::17:415
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-Sciuridae
+        as_sets: []
+      transit_free:
+        asns:
+        - 17415
 - asn: 9886
   ip: 2404:f4c0:f70e:1980::9886
   cfg:
@@ -157,6 +172,8 @@ clients:
         enforce_prefix_in_as_set: false
       transit_free:
         action: tag
+        asns:
+        - 60326
       never_via_route_servers:
         peering_db: false
         asns: []
@@ -214,6 +231,9 @@ clients:
     filtering:
       irrdb:
         as_sets: []
+      transit_free:
+        asns:
+        - 203314
 - asn: 212154
   ip: fe80::212:154
   cfg:
@@ -226,8 +246,10 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - APNIC::AS-SET-AS131171
+        as_sets: []
+      transit_free:
+        asns:
+        - 131171
 - asn: 202952
   ip: fe80::202:952
   cfg:
@@ -240,8 +262,10 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-ZERODISTANCE
+        as_sets: []
+      transit_free:
+        asns:
+        - 57406
 - asn: 205329
   ip: 2404:f4c0:f70e:1980::205:329
   cfg:
@@ -252,6 +276,8 @@ clients:
         enforce_prefix_in_as_set: false
       transit_free:
         action: tag
+        asns:
+        - 205329
       never_via_route_servers:
         peering_db: false
         asns: []
@@ -286,15 +312,19 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-CHIMON
+        as_sets: []
+      transit_free:
+        asns:
+        - 202939
 - asn: 202776
   ip: 2404:f4c0:f70e:1980::202:776
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-MOECLUB
+        as_sets: []
+      transit_free:
+        asns:
+        - 202776
 - asn: 207268
   ip: fe80::207:268
   cfg:
@@ -307,8 +337,10 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-RADISH
+        as_sets: []
+      transit_free:
+        asns:
+        - 201217
 - asn: 138435
   ip: fe80::138:435
   cfg:
@@ -348,8 +380,10 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-CRENET
+        as_sets: []
+      transit_free:
+        asns:
+        - 210445
 - asn: 200895
   ip: fe80::200:895
   cfg:
@@ -382,8 +416,10 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS212168:AS-PRPR
+        as_sets: []
+      transit_free:
+        asns:
+        - 212168
 - asn: 199656
   ip: fe80::199:656
   cfg:
@@ -396,8 +432,10 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS199632:AS-DECIMA
+        as_sets: []
+      transit_free:
+        asns:
+        - 199632
 - asn: 139888
   ip: 2404:f4c0:f70e:1980::139:888
   cfg:
