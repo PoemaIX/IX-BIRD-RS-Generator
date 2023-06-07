@@ -6,6 +6,7 @@ import subprocess
 import os
 import json
 import time
+from pathlib import Path
 
 RS2_down_asns = {}
 RS2_down_routes_txt = requests.get("http://[2404:f4c0:f70e:1980::2:1]:3234/bird?q=show%20route%20where%20%28199594%2C65530%2C7%29%21~bgp_large_community%26%26source%3DRTS_BGP%20all").text
