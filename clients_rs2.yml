@@ -12,9 +12,8 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 207705
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 57481
   ip: 2404:f4c0:f70e:1980::57:481
   cfg:
@@ -34,18 +33,16 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 61302
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 141237
   ip: 2404:f4c0:f70e:1980::141:237
   cfg:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 141237
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 139317
   ip: fe80::139:317
   cfg:
@@ -92,9 +89,8 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 140731
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 142281
   ip: fe80::142:281
   cfg:
@@ -121,9 +117,8 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 210932
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 134478
   ip: fe80::134:478
   cfg:
@@ -136,18 +131,16 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 212357
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 17415
   ip: 2404:f4c0:f70e:1980::17:415
   cfg:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 17415
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 9886
   ip: 2404:f4c0:f70e:1980::9886
   cfg:
@@ -172,8 +165,6 @@ clients:
         enforce_prefix_in_as_set: false
       transit_free:
         action: tag
-        asns:
-        - 60326
       never_via_route_servers:
         peering_db: false
         asns: []
@@ -190,6 +181,8 @@ clients:
       ipv6_pref_len:
         min: 0
         max: 48
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 142055
   ip: fe80::142:055
   cfg:
@@ -231,9 +224,8 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 203314
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 212154
   ip: fe80::212:154
   cfg:
@@ -247,9 +239,8 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 131171
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 202952
   ip: fe80::202:952
   cfg:
@@ -263,9 +254,8 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 57406
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 205329
   ip: 2404:f4c0:f70e:1980::205:329
   cfg:
@@ -276,8 +266,6 @@ clients:
         enforce_prefix_in_as_set: false
       transit_free:
         action: tag
-        asns:
-        - 205329
       never_via_route_servers:
         peering_db: false
         asns: []
@@ -294,6 +282,8 @@ clients:
       ipv6_pref_len:
         min: 0
         max: 48
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 200105
   ip: fe80::200:105
   cfg:
@@ -313,18 +303,16 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 202939
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 202776
   ip: 2404:f4c0:f70e:1980::202:776
   cfg:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 202776
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 207268
   ip: fe80::207:268
   cfg:
@@ -338,9 +326,8 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 201217
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 138435
   ip: fe80::138:435
   cfg:
@@ -381,9 +368,8 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 210445
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 200895
   ip: fe80::200:895
   cfg:
@@ -417,9 +403,8 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 212168
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 199656
   ip: fe80::199:656
   cfg:
@@ -433,9 +418,8 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-      transit_free:
-        asns:
-        - 199632
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 139888
   ip: 2404:f4c0:f70e:1980::139:888
   cfg:
