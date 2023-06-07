@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 cd /root/arouteserver/cache
 # export RIPE_PASSWD="XXXXXXXXXXXXXXXXXXXXXXX"
 /root/arouteserver/scripts/gen_ixpf.py | sed "s/fe80::/2404:f4c0:f70e:1980::/g" > /root/gitrs/KSKB-IX/static/files/ix-f.json
