@@ -55,7 +55,7 @@ else:
 base_json_new = base_json_old
 ixmember_old = extract_member(base_json_old)
 
-ixmember_new = map(lambda x:"AS" + int(x),RS2_down_asns.keys())
+ixmember_new = map(lambda x:"AS" + str(x),RS2_down_asns.keys())
 
 if ixmember_old != ixmember_new:
     new_json = pack_member(base_json_old,ixmember_new)
