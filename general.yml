@@ -87,7 +87,10 @@ cfg:
 
   graceful_shutdown:
     enabled: True
-
+  custom_communities:
+    as_path_contains_transit:
+      std: "65530:7"
+      lrg: "rs_as:65530:7"
   communities:
     reject_cause:
       std: "65531:dyn_val"
