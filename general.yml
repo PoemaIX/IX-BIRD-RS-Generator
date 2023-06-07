@@ -88,7 +88,7 @@ cfg:
   graceful_shutdown:
     enabled: True
   custom_communities:
-    as_path_contains_transit:
+    as_path_mark_transit:
       std: "65530:7"
       lrg: "rs_as:65530:7"
   communities:
