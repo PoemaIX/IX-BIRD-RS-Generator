@@ -14,5 +14,5 @@ export CLIENTS_ASSET_PATH="/root/gitrs/KSKB-IX/static/files/kskbix-rs1-estab.yam
 python3 /root/gitrs/RIPE-AS-SET-SYNC/AS-KSKB-IX-RS2.py
 
 export AS_SET="AS-KSKB-IX-RS2"
-export CLIENTS_ASSET_PATH="/root/gitrs/KSKB-IX/static/files/kskbix-rs2-estab.yaml"
-python3 /root/gitrs/RIPE-AS-SET-SYNC/AS-KSKB-IX-RS2.py --flat
+#export CLIENTS_ASSET_PATH="/root/gitrs/KSKB-IX/static/files/kskbix-rs2-estab.yaml"
+python3 /root/arouteserver/scripts/gen_asset_2.py
