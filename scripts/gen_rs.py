@@ -60,9 +60,14 @@ if sys.argv[1] == "2":
             as_set_info = getinfo(as_set,6)
             if int(the_asn) in stuix_members:
                 if "attach_custom_communities" not in client["clients"][ci]["cfg"]:
-                    client["clients"][ci]["cfg"]["attach_custom_communities"] = ["as_path_mark_transit"]
+                    client["clients"][ci]["cfg"]["attach_custom_communities"] = ["as_path_from_stuix"]
                 else:
-                    client["clients"][ci]["cfg"]["attach_custom_communities"] +=  ["as_path_mark_transit"]
+                    client["clients"][ci]["cfg"]["attach_custom_communities"] +=  ["as_path_from_stuix"]
+            elif "enforce_origin_in_as_set" in client["clients"][ci]["cfg"]["filtering"]:
+                if "attach_custom_communities" not in client["clients"][ci]["cfg"]:
+                    client["clients"][ci]["cfg"]["attach_custom_communities"] = ["as_path_from_stuix"]
+                else:
+                    client["clients"][ci]["cfg"]["attach_custom_communities"] +=  ["as_path_from_stuix"]
             elif as_set_info["prefix_num"] <= 100 and as_set_info["t1_asns"] == []:
                 as_sets_new += [as_set]
             else:
