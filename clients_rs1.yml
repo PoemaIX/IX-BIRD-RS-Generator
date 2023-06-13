@@ -409,3 +409,10 @@ clients:
       irrdb:
         as_sets:
         - AS212623:AS-INPRTX
+- asn: 60900
+  ip: 2404:f4c0:f70e:1980::60:900
+  cfg:
+    filtering:
+      irrdb:
+        as_sets:
+        - RIPE::AS60900:AS-MAIN
