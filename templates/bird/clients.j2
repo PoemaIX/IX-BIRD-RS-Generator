@@ -409,6 +409,8 @@ protocol bgp {{ client.id }} {
 	neighbor {{ client.ip }} as {{ client.asn }};
         {% if client.asn != cfg.rs_as %}
 	rs client;
+        {% else %}
+	direct;
 	{% endif -%}
 	
 
