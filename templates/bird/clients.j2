@@ -411,6 +411,7 @@ protocol bgp {{ client.id }} {
 	rs client;
         {% else %}
 	direct;
+        allow local as 6;
 	{% endif -%}
 	
 
