@@ -407,7 +407,10 @@ protocol bgp {{ client.id }} {
 
 	local as {{ cfg.rs_as }};
 	neighbor {{ client.ip }} as {{ client.asn }};
+        {% if client.asn != cfg.rs_as %}
 	rs client;
+	{% endif -%}
+	
 
 	keepalive time 30;
 
