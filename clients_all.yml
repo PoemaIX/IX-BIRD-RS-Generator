@@ -1,4 +1,11 @@
 clients:
+- asn: 199594
+  name: "Poema IX RS"
+  ip: "fe80::199:594"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
 - asn: 138517
   name: "Poema Network"
   ip: "2404:f4c0:f70e:1980::138:517"
