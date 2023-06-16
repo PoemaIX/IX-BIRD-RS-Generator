@@ -1,6 +1,6 @@
 clients:
 - asn: 199594
-  ip: fe80::199:594
+  ip: fe80::1000:199:594
   cfg:
     filtering:
       irrdb:
