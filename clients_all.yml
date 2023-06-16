@@ -1,7 +1,7 @@
 clients:
 - asn: 199594
   name: "Poema IX RS"
-  ip: "fe80::199:594"
+  ip: "fe80::1000:199:594"
   cfg:
     filtering:
       irrdb:
