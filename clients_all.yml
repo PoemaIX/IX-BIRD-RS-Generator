@@ -449,3 +449,11 @@ clients:
     filtering:
       irrdb:
         as_sets: [RIPE::AS60900:AS-MAIN]
+
+- asn: 198304
+  ip: fe80::198:304
+  name: "Pigeon Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
