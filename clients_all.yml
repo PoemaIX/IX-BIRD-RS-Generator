@@ -457,3 +457,12 @@ clients:
     filtering:
       irrdb:
         as_sets: []
+
+- asn: 18428
+  ip: 2404:f4c0:f70e:1980::18:428
+  name: "Mercycat Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
+
