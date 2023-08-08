@@ -464,5 +464,5 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: []
+        as_sets: [AS18428:AS-MERCYCAT]
 
