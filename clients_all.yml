@@ -379,8 +379,8 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-- asn: 203899
-  ip: "fe80::203:899"
+- asn: 62246
+  ip: "fe80::62:246"
   name: "WJY Network"
   cfg:
     filtering:
