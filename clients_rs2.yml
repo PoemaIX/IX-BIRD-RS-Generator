@@ -301,8 +301,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-DAOPORT
+        as_sets: []
 - asn: 202939
   ip: fe80::202:939
   cfg:
