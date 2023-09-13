@@ -472,5 +472,12 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS208747:AS-DRAGONET]
+- asn: 142553
+  ip: 2404:f4c0:f70e:1980::142:553
+  name: "AIRS Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
 
 
