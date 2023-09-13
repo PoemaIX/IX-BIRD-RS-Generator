@@ -344,6 +344,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-MESON-SELF]
+        white_list_route:
+          - prefix: "2602:feda:dc0::"
+            length: 44
+            asn: 142247
 - asn: 142164
   ip: "2404:f4c0:f70e:1980::142:164"
   name: "GoldDoge Networks"
