@@ -460,7 +460,8 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: []
+        as_sets:
+        - AS198304:AS-SET
 - asn: 18428
   ip: 2404:f4c0:f70e:1980::18:428
   cfg:
