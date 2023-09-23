@@ -482,3 +482,10 @@ clients:
     filtering:
       irrdb:
         as_sets: []
+- asn: 151674
+  ip: fe80::142:553
+  cfg:
+    filtering:
+      irrdb:
+        as_sets:
+        - AS151674:AS-HYUNET
