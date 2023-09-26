@@ -454,7 +454,7 @@ clients:
       irrdb:
         as_sets: []
 - asn: 151674
-  ip: fe80::142:553
+  ip: fe80::151:674
   cfg:
     filtering:
       irrdb:
