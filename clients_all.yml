@@ -512,7 +512,7 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS151674:AS-HYUNET]
- - asn: 202881
+- asn: 202881
   ip: 2404:f4c0:f70e:1980::202:881
   name: "MTS Network"
   cfg:
