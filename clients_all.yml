@@ -519,3 +519,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-MTSN]
+- asn: 199310
+  ip: fe80::199:310
+  name: "QFNET"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS199310:AS-QFNET]
