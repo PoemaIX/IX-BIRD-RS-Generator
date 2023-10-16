@@ -5,13 +5,22 @@ import sys
 import subprocess
 import os
 import json
+import traceback 
 import time
 from bird_parser import get_bird_session
 client = yaml.safe_load( open("/root/arouteserver/clients_all.yml").read())
 yaml.SafeDumper.ignore_aliases = lambda self, data: True
 
 t1_asns = [ 701, 1239, 1299, 2914, 3257, 3320, 3356, 3491, 5511, 6453, 6461, 6762, 6830, 7018, 12956, 174, 1273, 2828, 4134, 4809, 4637, 6939, 7473, 7922, 9002 ]
-stuix_members = [42,112,917,945,983,3856,6939,7480,13335,15169,16509,17415,18041,18178,18423,35384,38047,38254,38852,38856,44570,48024,50118,54625,57406,60326,61228,61302,63800,131149,131171,131642,131657,134823,135395,138211,138997,139247,140731,141237,142553,142641,147028,149423,149791,150173,151188,151338,199632,199688,201217,201801,202776,202820,202939,203283,203314,203423,204677,204844,205329,206003,207468,207469,207705,208137,209391,210445,210528,210932,211132,211323,211571,211946,212168,212331,212357,212358,212360]
+
+try:
+    x = requests.get('https://ixpm.stuix.io/api/v4/member-export/ixf/1.0')
+    x.raise_for_status()
+    stuix_members = [m["asnum"] for m in json.loads(x.text)["member_list"]]
+    open("stuix_members.json","w").write(json.dumps(stuix_members))
+except Exception as e:
+    print(traceback.format_exc())
+    stuix_members = json.loads(open("stuix_members.json","r").read())
 
 # get all as-set
 client_list = client["clients"]
