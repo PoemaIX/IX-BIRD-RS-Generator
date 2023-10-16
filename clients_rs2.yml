@@ -108,8 +108,9 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS208223:AS-ALL
+        as_sets: []
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 212483
   ip: fe80::212:483
   cfg:
@@ -208,8 +209,9 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-WOLFLAB
+        as_sets: []
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 57429
   ip: 2404:f4c0:f70e:1980::57:429
   cfg:
@@ -296,12 +298,16 @@ clients:
     filtering:
       irrdb:
         as_sets: []
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 210000
   ip: 2404:f4c0:f70e:1980::210:0
   cfg:
     filtering:
       irrdb:
         as_sets: []
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 202939
   ip: fe80::202:939
   cfg:
@@ -376,9 +382,8 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: []
-    attach_custom_communities:
-    - as_path_from_stuix
+        as_sets:
+        - AS-CRENET
 - asn: 200895
   ip: fe80::200:895
   cfg:
@@ -488,8 +493,9 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS18428:AS-MERCYCAT
+        as_sets: []
+    attach_custom_communities:
+    - as_path_from_stuix
 - asn: 208747
   ip: fe80::208:747
   cfg:
