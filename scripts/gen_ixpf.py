@@ -42,7 +42,7 @@ member_list = [
         "state": "active",
         "if_list": [
           {
-            "if_speed": 250,
+            "if_speed": 500,
             "switch_id": 1
           }
         ],
@@ -79,7 +79,7 @@ for ci in range(len(client["clients"])):
         "state": state,
         "if_list": [
             {
-                "if_speed": 250,
+                "if_speed": 500,
                 "switch_id": 1
             }
         ],
