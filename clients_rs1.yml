@@ -486,3 +486,10 @@ clients:
       irrdb:
         as_sets:
         - AS199310:AS-QFNET
+- asn: 49195
+  ip: fe80::49:195
+  cfg:
+    filtering:
+      irrdb:
+        as_sets:
+        - AS49195:AS-GLOBAL
