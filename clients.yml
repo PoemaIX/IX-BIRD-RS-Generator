@@ -493,3 +493,10 @@ clients:
       irrdb:
         as_sets:
         - AS49195:AS-GLOBAL
+- asn: 197860
+  ip: fe80::197:860
+  cfg:
+    filtering:
+      irrdb:
+        as_sets:
+        - AS197860:AS-HARUKA
