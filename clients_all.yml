@@ -534,7 +534,7 @@ clients:
       irrdb:
         as_sets: [AS49195:AS-GLOBAL]
 - asn: 197860
-  ip: fe80::49:195
+  ip: fe80::197:860
   name: "Haruka Network"
   cfg:
     filtering:
