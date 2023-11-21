@@ -149,8 +149,8 @@ clients:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
-- asn: 9886
-  ip: 2404:f4c0:f70e:1980::9886
+- asn: 139782
+  ip: 2404:f4c0:f70e:1980::139:782
   cfg:
     filtering:
       irrdb:
