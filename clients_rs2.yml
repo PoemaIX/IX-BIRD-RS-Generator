@@ -546,3 +546,10 @@ clients:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+- asn: 211035
+  ip: fe80::211:035
+  cfg:
+    filtering:
+      irrdb:
+        as_sets:
+        - AS211035:AS-PHANTOM-HIVE

@@ -500,3 +500,10 @@ clients:
       irrdb:
         as_sets:
         - AS197860:AS-HARUKA
+- asn: 211035
+  ip: fe80::211:035
+  cfg:
+    filtering:
+      irrdb:
+        as_sets:
+        - AS211035:AS-PHANTOM-HIVE
