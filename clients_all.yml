@@ -540,3 +540,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS197860:AS-HARUKA]
+- asn: 211035
+  ip: fe80::211:035
+  name: "PHANTOM HIVE NETWORK"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS211035:AS-PHANTOM-HIVE]
