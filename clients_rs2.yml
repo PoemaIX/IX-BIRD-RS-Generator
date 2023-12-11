@@ -293,14 +293,6 @@ clients:
         max: 48
     attach_custom_communities:
     - as_path_from_stuix
-- asn: 200105
-  ip: fe80::200:105
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: []
-    attach_custom_communities:
-    - as_path_from_stuix
 - asn: 210000
   ip: 2404:f4c0:f70e:1980::210:0
   cfg:
