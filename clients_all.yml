@@ -288,13 +288,6 @@ clients:
         max: 48
       #reject_policy: 
         #policy: tag
-- asn: 200105
-  ip: "fe80::200:105"
-  name: "MQNET"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: [AS-MoeQing]
 - asn: 210000
   ip: "2404:f4c0:f70e:1980::210:0"
   name: "DAOport OU"
