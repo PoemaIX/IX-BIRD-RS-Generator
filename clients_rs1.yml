@@ -425,7 +425,7 @@ clients:
     filtering:
       irrdb:
         as_sets:
-        - AS198304:AS-SET
+        - AS44324:AS-MD
       never_via_route_servers:
         peering_db: false
         asns: []
