@@ -453,7 +453,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: [AS198304:AS-SET]
+        as_sets: [AS44324:AS-MD]
         enforce_origin_in_as_set: False
         enforce_prefix_in_as_set: False
       transit_free:
