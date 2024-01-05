@@ -419,8 +419,8 @@ clients:
       irrdb:
         as_sets:
         - RIPE::AS60900:AS-MAIN
-- asn: 198304
-  ip: fe80::198:304
+- asn: 44324
+  ip: fe80::44:324
   cfg:
     filtering:
       irrdb:
