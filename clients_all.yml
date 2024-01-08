@@ -540,3 +540,11 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS211035:AS-PHANTOM-HIVE]
+- asn: 142553
+  ip: fe80::142:553
+  name: "Airs Project"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS142553:AS-SHIZUKUGLOBAL-APAC-APS]
+        
