@@ -404,13 +404,13 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS212168:AS-PRPR]
-- asn: 199656
-  ip: "fe80::199:656"
+- asn: 23347
+  ip: "fe80::23:347"
   name: "ZYC Network"
   cfg:
     filtering:
       irrdb:
-        as_sets: [AS199656:AS-ZYC]
+        as_sets: [AS-ZYC]
 - asn: 199632
   ip: "fe80::199:632"
   name: "Decima LLC"
