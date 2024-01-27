@@ -116,8 +116,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - RIPE::AS-86
+        as_sets: []
 - asn: 210932
   ip: fe80::210:932
   cfg:
