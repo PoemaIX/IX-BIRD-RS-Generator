@@ -130,8 +130,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-JSMSR
+        as_sets: []
 - asn: 212357
   ip: 2404:f4c0:f70e:1980::212:357
   cfg:
