@@ -37,8 +37,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-HUIZE
+        as_sets: []
 - asn: 141237
   ip: 2404:f4c0:f70e:1980::141:237
   cfg:
@@ -51,8 +50,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-ZXINC
+        as_sets: []
 - asn: 7721
   ip: fe80::7721
   cfg:
@@ -243,8 +241,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-ZERODISTANCE
+        as_sets: []
 - asn: 205329
   ip: 2404:f4c0:f70e:1980::205:329
   cfg:
@@ -269,8 +266,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-DAOPORT
+        as_sets: []
 - asn: 202939
   ip: fe80::202:939
   cfg:
