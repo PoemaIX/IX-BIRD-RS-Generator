@@ -39,8 +39,6 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-    attach_custom_communities:
-    - as_path_from_stuix
 - asn: 141237
   ip: 2404:f4c0:f70e:1980::141:237
   cfg:
@@ -245,9 +243,8 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: []
-    attach_custom_communities:
-    - as_path_from_stuix
+        as_sets:
+        - APNIC::AS-SET-AS131171
 - asn: 202952
   ip: fe80::202:952
   cfg:
