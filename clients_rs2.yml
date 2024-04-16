@@ -404,9 +404,8 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: []
-    attach_custom_communities:
-    - as_path_from_stuix
+        as_sets:
+        - AS212168:AS-PRPR
 - asn: 23347
   ip: fe80::23:347
   cfg:
