@@ -5,13 +5,6 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-- asn: 138517
-  ip: 2404:f4c0:f70e:1980::138:517
-  cfg:
-    filtering:
-      irrdb:
-        as_sets:
-        - AS-POEMA
 - asn: 207705
   ip: fe80::207:705
   cfg:
