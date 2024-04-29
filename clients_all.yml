@@ -533,4 +533,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS211035:AS-PHANTOM-HIVE]
-
+- asn: 53808
+  ip: fe80::53:808
+  name: "MoeDove"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
