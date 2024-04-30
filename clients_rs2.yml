@@ -532,3 +532,9 @@ clients:
       irrdb:
         as_sets:
         - AS211035:AS-PHANTOM-HIVE
+- asn: 53808
+  ip: fe80::53:808
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
