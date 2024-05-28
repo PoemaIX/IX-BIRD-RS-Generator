@@ -199,9 +199,8 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: []
-    attach_custom_communities:
-    - as_path_from_stuix
+        as_sets:
+        - AS-WOLFLAB
 - asn: 57429
   ip: 2404:f4c0:f70e:1980::57:429
   cfg:
