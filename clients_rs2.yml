@@ -398,7 +398,7 @@ clients:
       irrdb:
         as_sets:
         - AS-ZYC
-- asn: 199632
+- asn: 30114
   ip: fe80::199:632
   cfg:
     filtering:
