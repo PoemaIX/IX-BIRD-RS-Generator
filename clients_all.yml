@@ -390,13 +390,6 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS199683:AS-SET]
-- asn: 212168
-  ip: "fe80::212:168"
-  name: "prprCloud Limited"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: [AS212168:AS-PRPR]
 - asn: 23347
   ip: "fe80::23:347"
   name: "ZYC Network"
