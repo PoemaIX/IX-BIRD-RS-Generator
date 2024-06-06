@@ -372,13 +372,13 @@ clients:
       irrdb:
         as_sets:
         - AS-ZYC
-- asn: 199632
+- asn: 30114
   ip: fe80::199:632
   cfg:
     filtering:
       irrdb:
         as_sets:
-        - AS199632:AS-DECIMA
+        - AS30114:AS-DECIMA
 - asn: 139888
   ip: 2404:f4c0:f70e:1980::139:888
   cfg:
