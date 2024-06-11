@@ -523,3 +523,10 @@ clients:
     filtering:
       irrdb:
         as_sets: []
+- asn: 216123
+  ip: 2404:f4c0:f70e:1980::216:123
+  cfg:
+    filtering:
+      irrdb:
+        as_sets:
+        - AS216123:AS-ZHUYUAN
