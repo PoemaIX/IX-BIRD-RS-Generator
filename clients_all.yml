@@ -418,13 +418,13 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-- asn: 212623
-  ip: fe80::212:623
+- asn: 27010
+  ip: fe80::27:10
   name: "23751 NET"
   cfg:
     filtering:
       irrdb:
-        as_sets: [AS212623:AS-INPRTX]
+        as_sets: []
 - asn: 60900
   ip: 2404:f4c0:f70e:1980::60:900
   name: "Ssmidge LLC"
