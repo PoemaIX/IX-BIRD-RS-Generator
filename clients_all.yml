@@ -533,3 +533,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS216123:AS-ZHUYUAN]
+- asn: 215956
+  ip: 2404:f4c0:f70e:1980::215:956
+  name: "Dennis de Houx trading as All In One"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS215956:AS-MYIP]
