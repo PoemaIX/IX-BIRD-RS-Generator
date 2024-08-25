@@ -529,3 +529,10 @@ clients:
       irrdb:
         as_sets:
         - AS216123:AS-ZHUYUAN
+- asn: 215956
+  ip: 2404:f4c0:f70e:1980::215:956
+  cfg:
+    filtering:
+      irrdb:
+        as_sets:
+        - AS215956:AS-MYIP
