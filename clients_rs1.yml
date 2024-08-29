@@ -30,7 +30,8 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: []
+        as_sets:
+        - AS-HUIZE
 - asn: 141237
   ip: 2404:f4c0:f70e:1980::141:237
   cfg:
