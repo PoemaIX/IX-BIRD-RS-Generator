@@ -118,8 +118,8 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-CHESSKUO]
-- asn: 134478
-  ip: "fe80::134:478"
+- asn: 12198
+  ip: "fe80::12:198"
   name: "JSMSR"
   cfg:
     filtering:
