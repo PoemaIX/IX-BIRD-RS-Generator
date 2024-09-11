@@ -116,8 +116,8 @@ clients:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
-- asn: 134478
-  ip: fe80::134:478
+- asn: 12198
+  ip: fe80::12:198
   cfg:
     filtering:
       irrdb:
