@@ -82,10 +82,10 @@ jobs:
       if: steps.cache_ix_page.outputs.cache-hit != 'true'
       run: |
         export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
-        git clone git@github.com:KSKBpage/KSKB-IX.git /root/gitrs/KSKB-IX
+        git clone git@github.com:PoemaIX/KSKB-IX.git /root/gitrs/KSKB-IX
         export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ars"
-        git clone git@github.com:KusakabeShi/arouteserver.git /root/gitrs/ars
-        git clone https://github.com/KusakabeShi/RIPE-AS-SET-SYNC.git /root/gitrs/RIPE-AS-SET-SYNC
+        git clone git@github.com:PoemaIX/arouteserver.git /root/gitrs/ars
+        git clone https://github.com/PoemaIX/RIPE-AS-SET-SYNC.git /root/gitrs/RIPE-AS-SET-SYNC
     - name: reset to girts origin
       run: |
         export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
