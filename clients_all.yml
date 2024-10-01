@@ -540,3 +540,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS215956:AS-MYIP]
+- asn: 215934
+  ip: 2404:f4c0:f70e:1980::215:934
+  name: "Qian Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS215934:AS-QIANOWO]
