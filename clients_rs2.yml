@@ -362,8 +362,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-CRENET
+        as_sets: []
 - asn: 200895
   ip: fe80::200:895
   cfg:
