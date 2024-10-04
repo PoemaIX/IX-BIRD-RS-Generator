@@ -547,3 +547,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS215934:AS-QIANOWO]
+- asn: 140915
+  ip: fe80::140:915
+  name: "MNTG Network Global"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS140915:AS-MKNT]
