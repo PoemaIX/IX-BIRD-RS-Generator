@@ -498,8 +498,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS199310:AS-QFNET
+        as_sets: []
 - asn: 197860
   ip: fe80::197:860
   cfg:
