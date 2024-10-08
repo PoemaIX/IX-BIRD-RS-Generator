@@ -554,3 +554,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS140915:AS-MKNT]
+- asn: 207852
+  ip: fe80::207:852
+  name: "Y525 Global Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-Y525]
