@@ -108,6 +108,7 @@ jobs:
         /root/arouteserver/scripts/gen_rs.sh
       env:
         SECRET_PEERINGDB_API_KEY: ${{secrets.SECRET_PEERINGDB_API_KEY}}
+        PIP_BREAK_SYSTEM_PACKAGES: 1
         HOME: /root
       shell: bash
       
