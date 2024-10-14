@@ -123,6 +123,7 @@ jobs:
         HOME: /root
         RIPE_PASSWD: ${{secrets.RIPE_PASSWD}}
         GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
+        PIP_BREAK_SYSTEM_PACKAGES: 1
       shell: bash
     - name: Commit
       run: |
