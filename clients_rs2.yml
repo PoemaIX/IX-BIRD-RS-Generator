@@ -384,13 +384,6 @@ clients:
       irrdb:
         as_sets:
         - ARIN::AS-BLING
-- asn: 199683
-  ip: fe80::199:683
-  cfg:
-    filtering:
-      irrdb:
-        as_sets:
-        - AS199683:AS-SET
 - asn: 23347
   ip: fe80::23:347
   cfg:
