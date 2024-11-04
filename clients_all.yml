@@ -553,4 +553,4 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: [215750:AS-SET]
+        as_sets: [AS215750:AS-SET]
