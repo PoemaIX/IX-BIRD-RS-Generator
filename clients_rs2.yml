@@ -544,7 +544,7 @@ clients:
         as_sets:
         - AS-Y525
 - asn: 215750
-  ip: fe80::215:750
+  ip: 2404:f4c0:f70e:1980::215:750
   cfg:
     filtering:
       irrdb:
