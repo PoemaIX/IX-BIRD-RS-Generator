@@ -62,13 +62,6 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS209306:AS-SET]
-- asn: 140913
-  ip: "2404:f4c0:f70e:1980::140:913"
-  name: "Hentai Network Lab"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: [AS-KOISHI]
 - asn: 139328
   ip: "fe80::139:328"
   name: "Haima Global Network"
