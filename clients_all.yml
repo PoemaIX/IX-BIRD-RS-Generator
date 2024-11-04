@@ -547,3 +547,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-Y525]
+- asn: 215750
+  ip: fe80::215:750
+  name: "TENONET"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [215750:AS-SET]
