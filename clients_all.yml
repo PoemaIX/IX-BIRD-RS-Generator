@@ -355,13 +355,6 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-CRENET]
-- asn: 200895
-  ip: "fe80::200:895"
-  name: "Gua-Network"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: []
 - asn: 62246
   ip: "fe80::62:246"
   name: "WJY Network"
