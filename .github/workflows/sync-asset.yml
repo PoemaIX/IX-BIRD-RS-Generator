@@ -53,7 +53,7 @@ jobs:
         IXLAN_OVPN_CONF: ${{secrets.IXLAN_OVPN_ASSET_CONF}}
     - name: Cache /root/.local/items files
       id: cache_pip
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: |
           /root/.local/lib
@@ -71,7 +71,7 @@ jobs:
 
     - name: Cache /root/gitrs files
       id: cache_ix_page
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: |
           /root/gitrs
