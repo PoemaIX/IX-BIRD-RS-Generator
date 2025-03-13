@@ -216,8 +216,6 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-    attach_custom_communities:
-    - as_path_from_stuix
 - asn: 212154
   ip: fe80::212:154
   cfg:
