@@ -529,8 +529,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS140915:AS-MKNT
+        as_sets: []
 - asn: 207852
   ip: fe80::207:852
   cfg:
