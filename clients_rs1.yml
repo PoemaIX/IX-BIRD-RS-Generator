@@ -44,8 +44,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-ZXINC
+        as_sets: []
 - asn: 7721
   ip: fe80::7721
   cfg:
