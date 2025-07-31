@@ -13,13 +13,6 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-JKNET]
-- asn: 57481
-  name: "Haonan Yang"
-  ip: "2404:f4c0:f70e:1980::57:481"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: []
 - asn: 213262
   ip: "fe80::213:262"
   name: "Moe Overflow Electric"
