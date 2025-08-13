@@ -500,3 +500,10 @@ clients:
       irrdb:
         as_sets:
         - AS215750:AS-SET
+- asn: 401835
+  ip: fe80::401:835
+  cfg:
+    filtering:
+      irrdb:
+        as_sets:
+        - AS-BCR
