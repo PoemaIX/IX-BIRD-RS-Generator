@@ -224,13 +224,6 @@ clients:
     filtering:
       irrdb:
         as_sets: [APNIC::AS-SET-AS131171]
-- asn: 202952
-  ip: "fe80::202:952"
-  name: "Bandura Communications"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: [AS-BANDURA-SET]
 - asn: 57406
   ip: "fe80::57:406"
   name: "Zero Distance"
