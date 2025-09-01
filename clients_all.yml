@@ -132,13 +132,6 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-MERCYCLOUD]
-- asn: 149835
-  ip: "fe80::149:835"
-  name: "HUAJINET Internet"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: [AS149835:AS-ALL]
 - asn: 60326
   ip: "2404:f4c0:f70e:1980::60:326"
   name: "MrSheepNET"
