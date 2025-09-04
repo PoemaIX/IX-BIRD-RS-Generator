@@ -132,8 +132,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-MERCYCLOUD
+        as_sets: []
 - asn: 60326
   ip: 2404:f4c0:f70e:1980::60:326
   cfg:
