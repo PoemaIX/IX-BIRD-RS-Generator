@@ -201,7 +201,8 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets: []
+        as_sets:
+        - AS-HATSNET
 - asn: 212154
   ip: fe80::212:154
   cfg:
