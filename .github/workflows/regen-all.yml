@@ -62,7 +62,7 @@ jobs:
           /root/.local/share
         key: /root/.local/items at PoemaIX-BIRDGen all
     - name: Install depends
-      run: sudo apt-get install -y bgpq4 openvpn net-tools
+      run: sudo apt-get update && sudo apt-get install -y bgpq4 openvpn net-tools
     - name: connect to openvpn
       run: |
         sudo openvpn --daemon --config /root/.ssh/ovpn-kskb-ix.conf
