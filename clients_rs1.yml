@@ -493,3 +493,17 @@ clients:
       irrdb:
         as_sets:
         - AS-BCR
+- asn: 40929
+  ip: fe80::40:929
+  cfg:
+    filtering:
+      irrdb:
+        as_sets:
+        - AS-MOEDOVE-BN
+- asn: 213605
+  ip: fe80::213:605
+  cfg:
+    filtering:
+      irrdb:
+        as_sets:
+        - AS213605:AS-PYSIO-NETWORKS-TW
