@@ -533,3 +533,17 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-BCR]
+- asn: 40929
+  ip: fe80::40:929
+  name: "MoeDove Broadband"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-MOEDOVE-BN]
+- asn: 213605
+  ip: fe80::213:605
+  name: "Liu HaoRan"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS213605:AS-PYSIO-NETWORKS-TW]
