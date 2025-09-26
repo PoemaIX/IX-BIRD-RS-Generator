@@ -532,14 +532,14 @@ clients:
         as_sets:
         - AS-BCR
 - asn: 40929
-  ip: fe80::40:929
+  ip: 2404:f4c0:f70e:1980::40:929
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-MOEDOVE-BN
 - asn: 213605
-  ip: fe80::213:605
+  ip: 2404:f4c0:f70e:1980::213:605
   cfg:
     filtering:
       irrdb:
@@ -547,7 +547,7 @@ clients:
     attach_custom_communities:
     - as_path_from_stuix
 - asn: 211575
-  ip: fe80::211:575
+  ip: 2404:f4c0:f70e:1980::211:575
   cfg:
     filtering:
       irrdb:
