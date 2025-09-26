@@ -547,6 +547,28 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS213605:AS-PYSIO-NETWORKS-TW]
+        enforce_origin_in_as_set: False
+        enforce_prefix_in_as_set: False
+      transit_free:
+        action: "tag"
+      never_via_route_servers:
+        peering_db: False
+        asns: []
+      max_prefix:
+        peering_db:
+          enabled: False
+        limit_ipv6: 1000000
+      rpki_bgp_origin_validation:
+        enabled: False
+        reject_invalid: False
+      ipv4_pref_len:
+        min: 0
+        max: 24
+      ipv6_pref_len:
+        min: 0
+        max: 48
+      #reject_policy: 
+        #policy: tag
 - asn: 211575
   ip: 2404:f4c0:f70e:1980::211:575
   name: "Rui Feng"
