@@ -544,26 +544,6 @@ clients:
     filtering:
       irrdb:
         as_sets: []
-        enforce_origin_in_as_set: false
-        enforce_prefix_in_as_set: false
-      transit_free:
-        action: tag
-      never_via_route_servers:
-        peering_db: false
-        asns: []
-      max_prefix:
-        peering_db:
-          enabled: false
-        limit_ipv6: 1000000
-      rpki_bgp_origin_validation:
-        enabled: false
-        reject_invalid: false
-      ipv4_pref_len:
-        min: 0
-        max: 24
-      ipv6_pref_len:
-        min: 0
-        max: 48
     attach_custom_communities:
     - as_path_from_stuix
 - asn: 211575
