@@ -547,3 +547,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS213605:AS-PYSIO-NETWORKS-TW]
+- asn: 211575
+  ip: fe80::211:575
+  name: "Rui Feng"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS211575:AS-RUINETWORK]
