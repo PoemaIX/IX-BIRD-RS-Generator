@@ -546,3 +546,11 @@ clients:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+- asn: 211575
+  ip: fe80::211:575
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
+    attach_custom_communities:
+    - as_path_from_stuix
