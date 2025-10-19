@@ -576,3 +576,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS211575:AS-RUINETWORK]
+- asn: 150289
+  ip: 2404:f4c0:f70e:1980::150:289
+  name: "Sun Yanzheng"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-SUNYZ]
