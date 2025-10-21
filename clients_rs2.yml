@@ -579,5 +579,6 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-SUNYZ
+        as_sets: []
+    attach_custom_communities:
+    - as_path_from_stuix
