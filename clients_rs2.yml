@@ -329,8 +329,7 @@ clients:
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS-NET186
+        as_sets: []
 - asn: 210445
   ip: fe80::210:445
   cfg:
