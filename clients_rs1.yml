@@ -19,8 +19,8 @@ clients:
       irrdb:
         as_sets:
         - AS-CUTE
-- asn: 61302
-  ip: fe80::61:302
+- asn: 60539
+  ip: fe80::60:539
   cfg:
     filtering:
       irrdb:
@@ -54,19 +54,13 @@ clients:
       irrdb:
         as_sets:
         - AS209306:AS-SET
-- asn: 139328
-  ip: fe80::139:328
+- asn: 202335
+  ip: fe80::202:335
   cfg:
     filtering:
       irrdb:
         as_sets:
         - RIPE::AS-MOEBEE-CN
-- asn: 142551
-  ip: fe80::142:551
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: []
 - asn: 140731
   ip: fe80::140:731
   cfg:
@@ -108,13 +102,6 @@ clients:
       irrdb:
         as_sets:
         - AS-JSMSR
-- asn: 212357
-  ip: 2404:f4c0:f70e:1980::212:357
-  cfg:
-    filtering:
-      irrdb:
-        as_sets:
-        - AS-LEKO
 - asn: 17415
   ip: 2404:f4c0:f70e:1980::17:415
   cfg:
@@ -318,8 +305,8 @@ clients:
       irrdb:
         as_sets:
         - AS-WJY
-- asn: 199613
-  ip: fe80::199:613
+- asn: 51087
+  ip: fe80::51:87
   cfg:
     filtering:
       irrdb:
@@ -390,13 +377,6 @@ clients:
       irrdb:
         as_sets:
         - AS18428:AS-MERCYCAT
-- asn: 208747
-  ip: fe80::208:747
-  cfg:
-    filtering:
-      irrdb:
-        as_sets:
-        - AS208747:AS-DRAGONET
 - asn: 142553
   ip: 2404:f4c0:f70e:1980::142:553
   cfg:
@@ -465,13 +445,12 @@ clients:
       irrdb:
         as_sets:
         - AS215934:AS-QIANOWO
-- asn: 140915
-  ip: fe80::140:915
+- asn: 204244
+  ip: fe80::204:244
   cfg:
     filtering:
       irrdb:
-        as_sets:
-        - AS140915:AS-MKNT
+        as_sets: []
 - asn: 207852
   ip: fe80::207:852
   cfg:
