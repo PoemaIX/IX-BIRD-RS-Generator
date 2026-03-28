@@ -484,13 +484,13 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS215934:AS-QIANOWO]
-- asn: 140915
-  ip: fe80::140:915
+- asn: 204244
+  ip: fe80::204:244
   name: "MNTG Network Global"
   cfg:
     filtering:
       irrdb:
-        as_sets: [AS140915:AS-MKNT]
+        as_sets: []
 - asn: 207852
   ip: fe80::207:852
   name: "Y525 Global Network"
