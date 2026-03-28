@@ -62,13 +62,6 @@ clients:
     filtering:
       irrdb:
         as_sets: [RIPE::AS-MOEBEE-CN]
-- asn: 142551
-  ip: "fe80::142:551"
-  name: "Azurite27 Network"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: []
 - asn: 140731
   ip: "fe80::140:731"
   name: "TOHU Public Internet"
