@@ -111,13 +111,6 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-JSMSR]
-- asn: 212357
-  ip: "2404:f4c0:f70e:1980::212:357"
-  name: "Leko Internet Individual"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: [AS-LEKO]
 - asn: 17415
   ip: "2404:f4c0:f70e:1980::17:415"
   name: "Ming Yi Tea Farm"
