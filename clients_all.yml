@@ -341,8 +341,8 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-WJY]
-- asn: 199613
-  ip: "fe80::199:613"
+- asn: 51087
+  ip: "fe80::51:87"
   name: "Bling Network"
   cfg:
     filtering:
