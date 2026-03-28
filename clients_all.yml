@@ -55,8 +55,8 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS209306:AS-SET]
-- asn: 139328
-  ip: "fe80::139:328"
+- asn: 202335
+  ip: "fe80::202:335"
   name: "Haima Global Network"
   cfg:
     filtering:
