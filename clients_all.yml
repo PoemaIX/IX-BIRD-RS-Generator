@@ -428,13 +428,6 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS18428:AS-MERCYCAT]
-- asn: 208747
-  ip: fe80::208:747
-  name: "Dragon Network"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: [AS208747:AS-DRAGONET]
 - asn: 142553
   ip: 2404:f4c0:f70e:1980::142:553
   name: "AIRS Network"
