@@ -20,7 +20,7 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-CUTE]
-- asn: 61302
+- asn: 60539
   ip: "fe80::61:302"
   name: "HUIZE-NET"
   cfg:
