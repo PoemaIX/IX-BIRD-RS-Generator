@@ -63,9 +63,6 @@ jobs:
         key: /root/.local/items at PoemaIX-BIRDGen all
     - name: Install depends
       run: sudo apt-get update && sudo apt-get install -y bgpq4 openvpn net-tools
-    - name: connect to openvpn
-      run: |
-        sudo openvpn --daemon --config /root/.ssh/ovpn-kskb-ix.conf
     - name: Get current time
       uses: gerred/actions/current-time@master
       id: current-time
@@ -100,8 +97,9 @@ jobs:
         cd  /root/gitrs/KSKB-IX
         git fetch --all --force
         git reset --hard origin/main
-
-
+    - name: connect to openvpn
+      run: |
+        sudo bash /root/arouteserver/scripts/connect_ovpn.sh
     - name: regenerate bird config
       run: |
         pip3 install -r /root/gitrs/ars/requirements.txt
