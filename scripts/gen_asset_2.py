@@ -47,17 +47,17 @@ def pack_member(base_json,member_list):
     return base_json
 
 base_json_save = Path(as_set + "_last.json")
-if base_json_save.is_file():
-    base_json_old = json.loads(open(base_json_save).read())
-else:
-    base_json_old = json.loads(requests.request("GET", url, headers=headers).text)
+# if base_json_save.is_file():
+#     base_json_old = json.loads(open(base_json_save).read())
+# else:
+base_json_old = json.loads(requests.request("GET", url, headers=headers).text)
     
 base_json_new = base_json_old
 ixmember_old = extract_member(base_json_old)
 
-ixmember_new = map(lambda x:"AS" + str(x),RS2_down_asns.keys())
-
-if ixmember_old != ixmember_new:
+ixmember_new = sorted(["AS" + str(x) for x in RS2_down_asns])
+ixmember_old_sorted = sorted(ixmember_old)
+if ixmember_old_sorted != ixmember_new:
     new_json = pack_member(base_json_old,ixmember_new)
     payload = json.dumps(new_json)
     response = requests.request("PUT", url, headers=headers, data=payload)
