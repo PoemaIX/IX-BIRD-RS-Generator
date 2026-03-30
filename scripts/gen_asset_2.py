@@ -21,7 +21,7 @@ for textline in RS2_down_routes_txt.split("\n"):
 as_set = os.environ["AS_SET"]
 password = os.environ["RIPE_PASSWD"]
 
-url = f"https://rest.db.ripe.net/ripe/as-set/{as_set}?password={password}"
+url = f"https://{password}@rest.db.ripe.net/ripe/as-set/{as_set}"
 
 headers = {
   'Content-Type': 'application/json',
