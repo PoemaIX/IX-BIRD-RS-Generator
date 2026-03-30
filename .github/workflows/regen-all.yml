@@ -94,6 +94,8 @@ jobs:
         git fetch --all --force
         git reset --hard origin/KSKB-IX
         cd  /root/gitrs/RIPE-AS-SET-SYNC
+        git fetch --all --force
+        git reset --hard origin/main
         cd  /root/gitrs/KSKB-IX
         git fetch --all --force
         git reset --hard origin/main
