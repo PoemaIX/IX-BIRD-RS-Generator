@@ -116,6 +116,7 @@ jobs:
       run: |
         pip3 install pipenv jieba==0.42.1
         curl -fsSL https://d2lang.com/install.sh | sh -s --
+        curl https://pyenv.run | bash
         git config --global user.email si@kskb.eu.org
         git config --global user.name KusakabeSi
         /root/arouteserver/scripts/sync_asset.sh
