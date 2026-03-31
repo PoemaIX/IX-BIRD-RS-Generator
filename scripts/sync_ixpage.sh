@@ -6,6 +6,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH=$HOME/.local/bin:$PATH
 . ~/.bashrc
 eval "$(pyenv init - bash)"
+pyenv install 3.11.5
 cd /root/gitrs/KSKB-IX
 git fetch --all --force
 git reset --hard origin/main
