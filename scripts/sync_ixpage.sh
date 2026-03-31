@@ -1,7 +1,9 @@
 #!/bin/bash
 set -x
 set -e
-export PATH=$HOME/.local/bin:$HOME/.pyenv/bin:$PATH
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH=$HOME/.local/bin:$PATH
 cd /root/gitrs/KSKB-IX
 git fetch --all --force
 git reset --hard origin/main
