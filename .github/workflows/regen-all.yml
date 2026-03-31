@@ -114,7 +114,8 @@ jobs:
       
     - name: push ixpage back
       run: |
-        pip3 install mkdocs-bootswatch pymdown-extensions mkdocs-material jieba
+        pip3 install pipenv jieba==0.42.1
+        curl -fsSL https://d2lang.com/install.sh | sh -s --
         git config --global user.email si@kskb.eu.org
         git config --global user.name KusakabeSi
         /root/arouteserver/scripts/sync_asset.sh
