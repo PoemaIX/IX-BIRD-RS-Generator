@@ -562,3 +562,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-SUNYZ]
+- asn: 40929
+  ip: fe80::40:929
+  name: "MoeDove R&E Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS-MOEDOVE-BN]
