@@ -569,3 +569,10 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-MOEDOVE-BN]
+- asn: 213428
+  ip: fe80::213:428
+  name: "Haco Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS213428:AS-HACO]
