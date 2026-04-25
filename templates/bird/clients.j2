@@ -408,6 +408,10 @@ filter announce_to_{{ client.id }}{{ filter_suffix }} {
         perform_graceful_shutdown();
         {% endif %}
 
+        {% if client.ip|ipaddr_ver == 6 and (client.ip|lower).startswith("fe80::") %}
+        bgp_next_hop_global = ::;
+        {% endif %}
+
         {% if "post_announce_to_client"|hook_is_set %}
         if !hook_post_announce_to_client({{ client.asn }}, {{ client.ip }}, "{{ client.id }}") then
                 reject "hook_post_announce_to_client returned false - NOT ANNOUNCING ", net, " TO {{ client.id}}";
