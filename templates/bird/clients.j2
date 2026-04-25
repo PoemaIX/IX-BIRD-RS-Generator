@@ -36,7 +36,7 @@ reject {{ err_msg }};
 {% set client_afis = [4, 6] if ext_nh_enabled else [primary_ver] %}
 
 # AS-SET for {{ client.id }}
-function origin_as_is_in_{{ client.id }}_as_set() {
+function origin_as_is_in_{{ client.id }}_as_set() -> bool {
 {% if client.cfg.filtering.irrdb.as_set_bundle_ids %}
 {%      for as_set_bundle_id in client.cfg.filtering.irrdb.as_set_bundle_ids|sort %}
 {%              if irrdb_info[as_set_bundle_id].asns %}
@@ -53,7 +53,7 @@ function origin_as_is_in_{{ client.id }}_as_set() {
 {% for ch_ver in client_afis %}
 {% set filter_suffix = "" if ch_ver == primary_ver else "_ipv%d"|format(ch_ver) %}
 # R-SET for {{ client.id }} (IPv{{ ch_ver }})
-function prefix_is_in_{{ client.id }}{{ filter_suffix }}_as_set() {
+function prefix_is_in_{{ client.id }}{{ filter_suffix }}_as_set() -> bool {
 {% if client.cfg.filtering.irrdb.as_set_bundle_ids %}
 {%      for as_set_bundle_id in client.cfg.filtering.irrdb.as_set_bundle_ids|sort %}
 {%    set prefixes = irrdb_info[as_set_bundle_id].prefixes|selectattr("prefix", "is_ipver", ch_ver)|list %}
@@ -75,23 +75,25 @@ function prefix_is_in_{{ client.id }}{{ filter_suffix }}_as_set() {
 }
 
 {% endfor %}
-function next_hop_is_valid_for_{{ client.id }}()
+function next_hop_is_valid_for_{{ client.id }}() -> bool
+ip bgp_next_hop_check;
 {
 {% if client.ip|ipaddr_ver == 6 and (client.ip|lower).startswith("fe80::") %}
-        # The client address is an IPv6 link-local one; we can't check it because [description of the issue].
-        return true;
+        bgp_next_hop_check = bgp_next_hop_ll;
+{% else %}
+        bgp_next_hop_check = bgp_next_hop;
 {% endif %}
         # Checks if NEXT_HOP is one of those allowed for routes announced by {{ client.id }}
 {% if client.cfg.filtering.next_hop.policy == "strict" %}
-        if bgp_next_hop = {{ client.ip }} then return true;
+        if bgp_next_hop_check = {{ client.ip }} then return true;
 {% elif client.cfg.filtering.next_hop.policy == "authorized_addresses" %}
 {%      for addr in client.cfg.filtering.next_hop.authorized_addresses_list|sort if addr|ipaddr_ver == client.ip|ipaddr_ver %}
-        if bgp_next_hop = {{ addr }} then return true;
+        if bgp_next_hop_check = {{ addr }} then return true;
 {%      endfor %}
 {% else %}
 {%      for asn, same_as_clients in clients|groupby("asn") if asn == client.asn %}
 {%              for same_as_client in same_as_clients|sort(attribute="ip") if same_as_client.ip|ipaddr_ver == client.ip|ipaddr_ver %}
-        if bgp_next_hop = {{ same_as_client.ip }} then return true;     # {{ same_as_client.id }}
+        if bgp_next_hop_check = {{ same_as_client.ip }} then return true;     # {{ same_as_client.id }}
 {%              endfor %}
 {%      endfor %}
 {% endif %}
@@ -101,7 +103,7 @@ function next_hop_is_valid_for_{{ client.id }}()
 {% if client.cfg.filtering.black_list_pref %}
 {% for ch_ver in client_afis %}
 {% set filter_suffix = "" if ch_ver == primary_ver else "_ipv%d"|format(ch_ver) %}
-function prefix_is_in_{{ client.id }}{{ filter_suffix }}_blacklist()
+function prefix_is_in_{{ client.id }}{{ filter_suffix }}_blacklist() -> bool
 prefix set {{ client.id }}{{ filter_suffix }}_blacklist;
 {
         {{ client.id }}{{ filter_suffix }}_blacklist = [
