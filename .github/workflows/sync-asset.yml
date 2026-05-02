@@ -51,7 +51,7 @@ jobs:
         SSH_KEY_IXPAGE: ${{secrets.SSH_KEY_IXPAGE}}
         SSH_KEY_ARS: ${{secrets.SSH_KEY_ARS}}
         IXLAN_OVPN_CONF: ${{secrets.IXLAN_OVPN_ASSET_CONF}}
-    - name: Cache /root/.local/items files
+    - name: Cache /root/.local and /root/.pyenv
       id: cache_pip
       uses: actions/cache@v4
       with:
@@ -59,9 +59,13 @@ jobs:
           /root/.local/lib
           /root/.local/bin
           /root/.local/share
-        key: /root/.local/items at PoemaIX-BIRDGen asset
+          /root/.pyenv
+        key: /root/.local/items at PoemaIX-BIRDGen asset v2
     - name: Install depends
-      run: sudo apt-get install -y bgpq4 openvpn net-tools
+      uses: awalsh128/cache-apt-pkgs-action@latest
+      with:
+        packages: bgpq4 openvpn net-tools libbz2-dev libreadline-dev liblzma-dev
+        version: 1.0
     - name: Get current time
       uses: gerred/actions/current-time@master
       id: current-time
