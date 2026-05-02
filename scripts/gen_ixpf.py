@@ -74,6 +74,17 @@ for ci in range(len(client["clients"])):
     as_macro = as_macros[0] if len(as_macros) > 0 else ""
     routeserver = asnum in RS1_estab
     state = "active" if routeserver else "inactive"
+    sessions = client["clients"][ci]["sessions"]
+    vlan_list = []
+    for sess in sessions:
+        ipv6_entry = {
+            "address": sess["ip"],
+            "as_macro": as_macro,
+            "routeserver": routeserver
+        }
+        if "mac" in sess:
+            ipv6_entry["mac_addresses"] = [sess["mac"]]
+        vlan_list.append({"vlan_id": 0, "ipv6": ipv6_entry})
     connection_item = {
         "ixp_id": 0,
         "state": state,
@@ -83,16 +94,7 @@ for ci in range(len(client["clients"])):
                 "switch_id": 1
             }
         ],
-        "vlan_list": [
-            {
-                "vlan_id": 0,
-                "ipv6": {
-                    "address": client["clients"][ci]["ip"],
-                    "as_macro": as_macro,
-                    "routeserver": routeserver
-                }
-            }
-        ]
+        "vlan_list": vlan_list
     }
     member_item = {
         "asnum": asnum,

@@ -118,9 +118,17 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE
         git add -A
-        git diff-index --quiet HEAD || git commit -m "update" -a
+        if ! git diff-index --quiet HEAD; then
+          LAST_MSG=$(git log -1 --pretty=%s)
+          if [ "$LAST_MSG" = "update" ]; then
+            git commit --amend --no-edit -a
+          else
+            git commit -m "update" -a
+          fi
+        fi
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: master
+        force: true

@@ -1,125 +1,143 @@
 clients:
 - asn: 199594
   name: "Poema IX RS"
-  ip: "fe80::1000:199:594"
+  sessions:
+    - ip: "fe80::1000:199:594"
   cfg:
     filtering:
       irrdb:
         as_sets: []
 - asn: 207705
   name: "JK-Network"
-  ip: "fe80::207:705"
+  sessions:
+    - ip: "fe80::207:705"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-JKNET]
 - asn: 213262
-  ip: "fe80::213:262"
+  sessions:
+    - ip: "fe80::213:262"
   name: "Moe Overflow Electric"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-CUTE]
 - asn: 60539
-  ip: "fe80::60:539"
+  sessions:
+    - ip: "fe80::60:539"
   name: "HUIZE-NET"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-HUIZE]
 - asn: 141237
-  ip: "2404:f4c0:f70e:1980::141:237"
+  sessions:
+    - ip: "2404:f4c0:f70e:1980::141:237"
   name: "Moecast Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-MOEC]
 - asn: 139317
-  ip: "fe80::139:317"
+  sessions:
+    - ip: "fe80::139:317"
   name: "ZX Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-ZXINC]
 - asn: 7721
-  ip: "fe80::7721"
+  sessions:
+    - ip: "fe80::7721"
   name: "Qin Cloud Networks"
   cfg:
     filtering:
       irrdb:
         as_sets: [APNIC::AS-QINCLOUD]
 - asn: 209306
-  ip: "2404:f4c0:f70e:1980::209:306"
+  sessions:
+    - ip: "2404:f4c0:f70e:1980::209:306"
   name: "SohaNET"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS209306:AS-SET]
 - asn: 202335
-  ip: "fe80::202:335"
+  sessions:
+    - ip: "fe80::202:335"
   name: "Haima Global Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [RIPE::AS-MOEBEE-CN]
 - asn: 140731
-  ip: "fe80::140:731"
+  sessions:
+    - ip: "fe80::140:731"
   name: "TOHU Public Internet"
   cfg:
     filtering:
       irrdb:
         as_sets: [RIPE::AS-TOHUNET]
 - asn: 142281
-  ip: "fe80::142:281"
+  sessions:
+    - ip: "fe80::142:281"
   name: "Yuuta Network"
   cfg:
     filtering:
       irrdb:
         as_sets: []
 - asn: 208223
-  ip: "fe80::208:223"
+  sessions:
+    - ip: "fe80::208:223"
   name: "Foxo.tw's ASN"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS208223:AS-ALL]
 - asn: 212483
-  ip: "fe80::212:483"
+  sessions:
+    - ip: "fe80::212:483"
   name: "Level 86 Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [RIPE::AS-86]
 - asn: 210932
-  ip: "fe80::210:932"
+  sessions:
+    - ip: "fe80::210:932"
   name: "Chess Network Services"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-CHESSKUO]
 - asn: 12198
-  ip: "fe80::12:198"
+  sessions:
+    - ip: "fe80::12:198"
   name: "JSMSR"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-JSMSR]
 - asn: 17415
-  ip: "2404:f4c0:f70e:1980::17:415"
+  sessions:
+    - ip: "2404:f4c0:f70e:1980::17:415"
   name: "Ming Yi Tea Farm"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-Sciuridae]
 - asn: 209554
-  ip: "2404:f4c0:f70e:1980::209:554"
+  sessions:
+    - ip: "2404:f4c0:f70e:1980::209:554"
   name: "MercyCloud Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-MERCYCLOUD]
 - asn: 60326
-  ip: "2404:f4c0:f70e:1980::60:326"
+  sessions:
+    - ip: "2404:f4c0:f70e:1980::60:326"
   name: "MrSheepNET"
   cfg:
     filtering:
@@ -148,70 +166,80 @@ clients:
       #reject_policy: 
         #policy: tag
 - asn: 142055
-  ip: "fe80::142:055"
+  sessions:
+    - ip: "fe80::142:055"
   name: "Anillc Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-ANILLC]
 - asn: 203472
-  ip: "fe80::203:472"
+  sessions:
+    - ip: "fe80::203:472"
   name: "Poema Network(EU)"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-POEMA]
 - asn: 205603
-  ip: "2404:f4c0:f70e:1980::205:603"
+  sessions:
+    - ip: "2404:f4c0:f70e:1980::205:603"
   name: "Wolf Network Lab"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-WOLFLAB]
 - asn: 57429
-  ip: "2404:f4c0:f70e:1980::57:429"
+  sessions:
+    - ip: "2404:f4c0:f70e:1980::57:429"
   name: "Haraguroicha Internet Services"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-HARAGUROICHA]
 - asn: 204508
-  ip: "fe80::204:508"
+  sessions:
+    - ip: "fe80::204:508"
   name: "Gatterer Manuel"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-MLGT]
 - asn: 203314
-  ip: "fe80::203:314"
+  sessions:
+    - ip: "fe80::203:314"
   name: "Hats Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-HATSNET]
 - asn: 212154
-  ip: "fe80::212:154"
+  sessions:
+    - ip: "fe80::212:154"
   name: "Saru Network 🤔"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-SARUNETWORK]
 - asn: 131171
-  ip: "fe80::131:171"
+  sessions:
+    - ip: "fe80::131:171"
   name: "Everlife Networks"
   cfg:
     filtering:
       irrdb:
         as_sets: [APNIC::AS-SET-AS131171]
 - asn: 57406
-  ip: "fe80::57:406"
+  sessions:
+    - ip: "fe80::57:406"
   name: "Zero Distance"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-ZERODISTANCE]
 - asn: 205329
-  ip: "2404:f4c0:f70e:1980::205:329"
+  sessions:
+    - ip: "2404:f4c0:f70e:1980::205:329"
   name: "Muilties Network"
   cfg:
     filtering:
@@ -240,49 +268,56 @@ clients:
       #reject_policy: 
         #policy: tag
 - asn: 210000
-  ip: "2404:f4c0:f70e:1980::210:0"
+  sessions:
+    - ip: "2404:f4c0:f70e:1980::210:0"
   name: "DAOport OU"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-DAOPORT]
 - asn: 202939
-  ip: "fe80::202:939"
+  sessions:
+    - ip: "fe80::202:939"
   name: "Chimon Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-CHIMON]
 - asn: 202776
-  ip: "2404:f4c0:f70e:1980::202:776"
+  sessions:
+    - ip: "2404:f4c0:f70e:1980::202:776"
   name: "Moeclub ltd"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-MOECLUB]
 - asn: 207268
-  ip: "fe80::207:268"
+  sessions:
+    - ip: "fe80::207:268"
   name: "Strategic Explorations"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-STREXP]
 - asn: 201217
-  ip: "fe80::201:217"
+  sessions:
+    - ip: "fe80::201:217"
   name: "RADISHCLOUD TECHNOLOGY"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-RADISH]
 - asn: 138435
-  ip: "fe80::138:435"
+  sessions:
+    - ip: "fe80::138:435"
   name: "YuetAu Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-YUETAU]
 - asn: 142427
-  ip: "fe80::142:427"
+  sessions:
+    - ip: "fe80::142:427"
   name: "Meson Global Network"
   cfg:
     filtering:
@@ -293,84 +328,96 @@ clients:
             length: 44
             asn: 142247
 - asn: 142164
-  ip: "2404:f4c0:f70e:1980::142:164"
+  sessions:
+    - ip: "2404:f4c0:f70e:1980::142:164"
   name: "GoldDoge Networks"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-142164]
 - asn: 203236
-  ip: "fe80::203:236"
+  sessions:
+    - ip: "fe80::203:236"
   name: "Lily Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-LILY]
 - asn: 200536
-  ip: "fe80::200:536"
+  sessions:
+    - ip: "fe80::200:536"
   name: "186526 Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-NET186]
 - asn: 210445
-  ip: "fe80::210:445"
+  sessions:
+    - ip: "fe80::210:445"
   name: "CRE Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-CRENET]
 - asn: 62246
-  ip: "fe80::62:246"
+  sessions:
+    - ip: "fe80::62:246"
   name: "WJY Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-WJY]
 - asn: 51087
-  ip: "fe80::51:87"
+  sessions:
+    - ip: "fe80::51:87"
   name: "Bling Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [ARIN::AS-BLING]
 - asn: 23347
-  ip: "fe80::23:347"
+  sessions:
+    - ip: "fe80::23:347"
   name: "ZYC Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-ZYC]
 - asn: 30114
-  ip: "fe80::30:114"
+  sessions:
+    - ip: "fe80::30:114"
   name: "Decima LLC"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS30114:AS-DECIMA]
 - asn: 139888
-  ip: 2404:f4c0:f70e:1980::139:888
+  sessions:
+    - ip: 2404:f4c0:f70e:1980::139:888
   name: "Time Network"
   cfg:
     filtering:
       irrdb:
         as_sets: []
 - asn: 150184
-  ip: fe80::150:184
+  sessions:
+    - ip: fe80::150:184
   name: "OwONet"
   cfg:
     filtering:
       irrdb:
         as_sets: []
 - asn: 27010
-  ip: fe80::27:10
+  sessions:
+    - ip: fe80::27:10
   name: "23751 NET"
   cfg:
     filtering:
       irrdb:
         as_sets: []
 - asn: 60900
-  ip: 2404:f4c0:f70e:1980::60:900
+  sessions:
+    - ip: 2404:f4c0:f70e:1980::60:900
   name: "Ssmidge LLC"
   cfg:
     filtering:
@@ -378,7 +425,8 @@ clients:
         as_sets: [RIPE::AS60900:AS-MAIN]
 
 - asn: 44324
-  ip: fe80::44:324
+  sessions:
+    - ip: fe80::44:324
   name: "Pigeon Network"
   cfg:
     filtering:
@@ -408,126 +456,137 @@ clients:
         #policy: tag
 
 - asn: 18428
-  ip: 2404:f4c0:f70e:1980::18:428
+  sessions:
+    - ip: 2404:f4c0:f70e:1980::18:428
   name: "Mercycat Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS18428:AS-MERCYCAT]
 - asn: 142553
-  ip: 2404:f4c0:f70e:1980::142:553
+  sessions:
+    - ip: 2404:f4c0:f70e:1980::142:553
   name: "AIRS Network"
   cfg:
     filtering:
       irrdb:
         as_sets: []
 - asn: 151674
-  ip: fe80::151:674
+  sessions:
+    - ip: fe80::151:674
   name: "HYU-NET"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS151674:AS-HYUNET]
 - asn: 202881
-  ip: 2404:f4c0:f70e:1980::202:881
+  sessions:
+    - ip: 2404:f4c0:f70e:1980::202:881
   name: "MTS Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-MTSN]
 - asn: 199310
-  ip: fe80::199:310
+  sessions:
+    - ip: fe80::199:310
   name: "QFNET"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS199310:AS-QFNET]
 - asn: 197860
-  ip: fe80::197:860
+  sessions:
+    - ip: fe80::197:860
   name: "Haruka Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS197860:AS-HARUKA]
 - asn: 211035
-  ip: fe80::211:035
+  sessions:
+    - ip: fe80::211:035
   name: "PHANTOM HIVE NETWORK"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS211035:AS-PHANTOM-HIVE]
 - asn: 53808
-  ip: fe80::53:808
+  sessions:
+    - ip: fe80::53:808
   name: "MoeDove"
   cfg:
     filtering:
       irrdb:
         as_sets: []
 - asn: 216123
-  ip: 2404:f4c0:f70e:1980::216:123
+  sessions:
+    - ip: 2404:f4c0:f70e:1980::216:123
   name: "ZhuyuanNetwork"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS216123:AS-ZHUYUAN]
 - asn: 215956
-  ip: 2404:f4c0:f70e:1980::215:956
+  sessions:
+    - ip: 2404:f4c0:f70e:1980::215:956
   name: "Dennis de Houx trading as All In One"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS215956:AS-MYIP]
 - asn: 215934
-  ip: 2404:f4c0:f70e:1980::215:934
+  sessions:
+    - ip: 2404:f4c0:f70e:1980::215:934
   name: "Qian Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS215934:AS-QIANOWO]
 - asn: 204244
-  ip: fe80::204:244
+  sessions:
+    - ip: fe80::204:244
   name: "MNTG Network Global"
   cfg:
     filtering:
       irrdb:
         as_sets: []
 - asn: 207852
-  ip: fe80::207:852
+  sessions:
+    - ip: fe80::207:852
   name: "Y525 Global Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-Y525]
 - asn: 215750
-  ip: 2404:f4c0:f70e:1980::215:750
+  sessions:
+    - ip: 2404:f4c0:f70e:1980::215:750
   name: "TENONET"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS215750:AS-SET]
 - asn: 401835
-  ip: fe80::401:835
+  sessions:
+    - ip: fe80::401:835
   name: "BCR"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-BCR]
 - asn: 40929
-  ip: 2404:f4c0:f70e:1980::1:40:929
-  name: "MoeDove R&E Network"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: [AS-MOEDOVE-BN]
-- asn: 40929
-  ip: fe80::40:929
+  sessions:
+    - ip: "2404:f4c0:f70e:1980::1:40:929"
+    - ip: "fe80::40:929"
   name: "MoeDove R&E Network"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-MOEDOVE-BN]
 - asn: 213605
-  ip: 2404:f4c0:f70e:1980::213:605
+  sessions:
+    - ip: 2404:f4c0:f70e:1980::213:605
   name: "Liu HaoRan"
   cfg:
     filtering:
@@ -556,21 +615,24 @@ clients:
       #reject_policy: 
         #policy: tag
 - asn: 211575
-  ip: 2404:f4c0:f70e:1980::211:575
+  sessions:
+    - ip: 2404:f4c0:f70e:1980::211:575
   name: "Rui Feng"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS211575:AS-RUINETWORK]
 - asn: 150289
-  ip: 2404:f4c0:f70e:1980::150:289
+  sessions:
+    - ip: 2404:f4c0:f70e:1980::150:289
   name: "Sun Yanzheng"
   cfg:
     filtering:
       irrdb:
         as_sets: [AS-SUNYZ]
 - asn: 213428
-  ip: fe80::213:428
+  sessions:
+    - ip: fe80::213:428
   name: "Haco Network"
   cfg:
     filtering:

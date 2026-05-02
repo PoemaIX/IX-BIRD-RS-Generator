@@ -5,8 +5,9 @@ import sys
 import subprocess
 import os
 import json
-import traceback 
+import traceback
 import time
+import copy
 from bird_parser import get_bird_session
 client = yaml.safe_load( open("/root/arouteserver/clients_all.yml").read())
 yaml.SafeDumper.ignore_aliases = lambda self, data: True
@@ -27,6 +28,15 @@ client_list = client["clients"]
 client_as_set = [(c["asn"],c["cfg"]["filtering"]["irrdb"]["as_sets"]) for c in client_list]
 client_as_set = {c[0]:c[1] if c[1] != [] else ["AS" + str(c[0])] for c in client_as_set}
 open("/root/gitrs/KSKB-IX/static/files/kskbix-all.yaml","w").write(yaml.safe_dump(client_as_set))
+
+expanded_clients = []
+for c in client["clients"]:
+    for sess in c["sessions"]:
+        entry = copy.deepcopy(c)
+        entry["ip"] = sess["ip"]
+        del entry["sessions"]
+        expanded_clients.append(entry)
+client["clients"] = expanded_clients
 
 expire = 86400
 

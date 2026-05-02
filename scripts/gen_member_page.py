@@ -154,11 +154,12 @@ for i in range(len(all_conf["clients"])):
     asn = conf["asn"]
     index = len(get_dict([],as_num,[asn]))
     add_dict(as_num,asn,i)
+    ips = [s["ip"] for s in conf["sessions"]]
     item["ASN"] = conf["asn"]
     item["Name"] = f'[{ conf["name"] }](https://bgp.tools/as/{asn})'
     item["AS-SET"] = ", ".join(conf["cfg"]["filtering"]["irrdb"]["as_sets"])
-    item["RS R1"]  = "- {: neigh_ip='" + format_ip(conf["ip"]) + "' RS='RSR1' }"
-    item["RS T"]   = "- {: neigh_ip='" + format_ip(conf["ip"]) + "' RS='RST' }"
+    item["RS R1"]  = "<br>".join(["- {: neigh_ip='" + format_ip(ip) + "' RS='RSR1' }" for ip in ips])
+    item["RS T"]   = "<br>".join(["- {: neigh_ip='" + format_ip(ip) + "' RS='RST' }" for ip in ips])
     status += [item]
 
 def tomark(listOfDicts):
