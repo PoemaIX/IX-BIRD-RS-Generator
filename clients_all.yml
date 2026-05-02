@@ -556,15 +556,6 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS211035:AS-PHANTOM-HIVE]
-- asn: 53808
-  sessions:
-    - ip: fe80::53:808
-      mac: "02:00:00:05:38:08"
-  name: "MoeDove"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: []
 - asn: 216123
   sessions:
     - ip: 2404:f4c0:f70e:1980::216:123
