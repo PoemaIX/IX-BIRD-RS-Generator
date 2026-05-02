@@ -158,8 +158,8 @@ for i in range(len(all_conf["clients"])):
     item["ASN"] = conf["asn"]
     item["Name"] = f'[{ conf["name"] }](https://bgp.tools/as/{asn})'
     item["AS-SET"] = ", ".join(conf["cfg"]["filtering"]["irrdb"]["as_sets"])
-    item["RS R1"]  = "<br>".join(["- {: neigh_ip='" + format_ip(ip) + "' RS='RSR1' }" for ip in ips])
-    item["RS T"]   = "<br>".join(["- {: neigh_ip='" + format_ip(ip) + "' RS='RST' }" for ip in ips])
+    item["RS R1"]  = "<br>".join(['<span neigh_ip="' + format_ip(ip) + '" rs="RSR1">-</span>' for ip in ips])
+    item["RS T"]   = "<br>".join(['<span neigh_ip="' + format_ip(ip) + '" rs="RST">-</span>' for ip in ips])
     status += [item]
 
 def tomark(listOfDicts):
