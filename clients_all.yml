@@ -11,6 +11,7 @@ clients:
   name: "JK-Network"
   sessions:
     - ip: "fe80::207:705"
+      mac: "02:00:00:20:77:05"
   cfg:
     filtering:
       irrdb:
@@ -18,6 +19,7 @@ clients:
 - asn: 213262
   sessions:
     - ip: "fe80::213:262"
+      mac: "02:00:00:21:32:62"
   name: "Moe Overflow Electric"
   cfg:
     filtering:
@@ -26,6 +28,7 @@ clients:
 - asn: 60539
   sessions:
     - ip: "fe80::60:539"
+      mac: "02:00:00:06:05:39"
   name: "HUIZE-NET"
   cfg:
     filtering:
@@ -34,6 +37,7 @@ clients:
 - asn: 141237
   sessions:
     - ip: "2404:f4c0:f70e:1980::141:237"
+      mac: "02:00:00:14:12:37"
   name: "Moecast Network"
   cfg:
     filtering:
@@ -42,6 +46,7 @@ clients:
 - asn: 139317
   sessions:
     - ip: "fe80::139:317"
+      mac: "02:00:00:13:93:17"
   name: "ZX Network"
   cfg:
     filtering:
@@ -50,6 +55,7 @@ clients:
 - asn: 7721
   sessions:
     - ip: "fe80::7721"
+      mac: "02:00:00:00:77:21"
   name: "Qin Cloud Networks"
   cfg:
     filtering:
@@ -58,6 +64,7 @@ clients:
 - asn: 209306
   sessions:
     - ip: "2404:f4c0:f70e:1980::209:306"
+      mac: "02:00:00:20:93:06"
   name: "SohaNET"
   cfg:
     filtering:
@@ -66,6 +73,7 @@ clients:
 - asn: 202335
   sessions:
     - ip: "fe80::202:335"
+      mac: "02:00:00:20:23:35"
   name: "Haima Global Network"
   cfg:
     filtering:
@@ -74,6 +82,7 @@ clients:
 - asn: 140731
   sessions:
     - ip: "fe80::140:731"
+      mac: "02:00:00:14:07:31"
   name: "TOHU Public Internet"
   cfg:
     filtering:
@@ -82,6 +91,7 @@ clients:
 - asn: 142281
   sessions:
     - ip: "fe80::142:281"
+      mac: "02:00:00:14:22:81"
   name: "Yuuta Network"
   cfg:
     filtering:
@@ -90,6 +100,7 @@ clients:
 - asn: 208223
   sessions:
     - ip: "fe80::208:223"
+      mac: "02:00:00:20:82:23"
   name: "Foxo.tw's ASN"
   cfg:
     filtering:
@@ -98,6 +109,7 @@ clients:
 - asn: 212483
   sessions:
     - ip: "fe80::212:483"
+      mac: "02:00:00:21:24:83"
   name: "Level 86 Network"
   cfg:
     filtering:
@@ -106,6 +118,7 @@ clients:
 - asn: 210932
   sessions:
     - ip: "fe80::210:932"
+      mac: "02:00:00:21:09:32"
   name: "Chess Network Services"
   cfg:
     filtering:
@@ -114,6 +127,7 @@ clients:
 - asn: 12198
   sessions:
     - ip: "fe80::12:198"
+      mac: "02:00:00:01:21:98"
   name: "JSMSR"
   cfg:
     filtering:
@@ -122,6 +136,7 @@ clients:
 - asn: 17415
   sessions:
     - ip: "2404:f4c0:f70e:1980::17:415"
+      mac: "02:00:00:01:74:15"
   name: "Ming Yi Tea Farm"
   cfg:
     filtering:
@@ -130,6 +145,7 @@ clients:
 - asn: 209554
   sessions:
     - ip: "2404:f4c0:f70e:1980::209:554"
+      mac: "02:00:00:20:95:54"
   name: "MercyCloud Network"
   cfg:
     filtering:
@@ -138,6 +154,7 @@ clients:
 - asn: 60326
   sessions:
     - ip: "2404:f4c0:f70e:1980::60:326"
+      mac: "02:00:00:06:03:26"
   name: "MrSheepNET"
   cfg:
     filtering:
@@ -168,6 +185,7 @@ clients:
 - asn: 142055
   sessions:
     - ip: "fe80::142:055"
+      mac: "02:00:00:14:20:55"
   name: "Anillc Network"
   cfg:
     filtering:
@@ -176,6 +194,7 @@ clients:
 - asn: 203472
   sessions:
     - ip: "fe80::203:472"
+      mac: "02:00:00:20:34:72"
   name: "Poema Network(EU)"
   cfg:
     filtering:
@@ -184,6 +203,7 @@ clients:
 - asn: 205603
   sessions:
     - ip: "2404:f4c0:f70e:1980::205:603"
+      mac: "02:00:00:20:56:03"
   name: "Wolf Network Lab"
   cfg:
     filtering:
@@ -192,6 +212,7 @@ clients:
 - asn: 57429
   sessions:
     - ip: "2404:f4c0:f70e:1980::57:429"
+      mac: "02:00:00:05:74:29"
   name: "Haraguroicha Internet Services"
   cfg:
     filtering:
@@ -200,6 +221,7 @@ clients:
 - asn: 204508
   sessions:
     - ip: "fe80::204:508"
+      mac: "02:00:00:20:45:08"
   name: "Gatterer Manuel"
   cfg:
     filtering:
@@ -208,6 +230,7 @@ clients:
 - asn: 203314
   sessions:
     - ip: "fe80::203:314"
+      mac: "02:00:00:20:33:14"
   name: "Hats Network"
   cfg:
     filtering:
@@ -216,6 +239,7 @@ clients:
 - asn: 212154
   sessions:
     - ip: "fe80::212:154"
+      mac: "02:00:00:21:21:54"
   name: "Saru Network 🤔"
   cfg:
     filtering:
@@ -224,6 +248,7 @@ clients:
 - asn: 131171
   sessions:
     - ip: "fe80::131:171"
+      mac: "02:00:00:13:11:71"
   name: "Everlife Networks"
   cfg:
     filtering:
@@ -232,6 +257,7 @@ clients:
 - asn: 57406
   sessions:
     - ip: "fe80::57:406"
+      mac: "02:00:00:05:74:06"
   name: "Zero Distance"
   cfg:
     filtering:
@@ -240,6 +266,7 @@ clients:
 - asn: 205329
   sessions:
     - ip: "2404:f4c0:f70e:1980::205:329"
+      mac: "02:00:00:20:53:29"
   name: "Muilties Network"
   cfg:
     filtering:
@@ -270,6 +297,7 @@ clients:
 - asn: 210000
   sessions:
     - ip: "2404:f4c0:f70e:1980::210:0"
+      mac: "02:00:00:21:00:00"
   name: "DAOport OU"
   cfg:
     filtering:
@@ -278,6 +306,7 @@ clients:
 - asn: 202939
   sessions:
     - ip: "fe80::202:939"
+      mac: "02:00:00:20:29:39"
   name: "Chimon Network"
   cfg:
     filtering:
@@ -286,6 +315,7 @@ clients:
 - asn: 202776
   sessions:
     - ip: "2404:f4c0:f70e:1980::202:776"
+      mac: "02:00:00:20:27:76"
   name: "Moeclub ltd"
   cfg:
     filtering:
@@ -294,6 +324,7 @@ clients:
 - asn: 207268
   sessions:
     - ip: "fe80::207:268"
+      mac: "02:00:00:20:72:68"
   name: "Strategic Explorations"
   cfg:
     filtering:
@@ -302,6 +333,7 @@ clients:
 - asn: 201217
   sessions:
     - ip: "fe80::201:217"
+      mac: "02:00:00:20:12:17"
   name: "RADISHCLOUD TECHNOLOGY"
   cfg:
     filtering:
@@ -310,6 +342,7 @@ clients:
 - asn: 138435
   sessions:
     - ip: "fe80::138:435"
+      mac: "02:00:00:13:84:35"
   name: "YuetAu Network"
   cfg:
     filtering:
@@ -318,6 +351,7 @@ clients:
 - asn: 142427
   sessions:
     - ip: "fe80::142:427"
+      mac: "02:00:00:14:24:27"
   name: "Meson Global Network"
   cfg:
     filtering:
@@ -330,6 +364,7 @@ clients:
 - asn: 142164
   sessions:
     - ip: "2404:f4c0:f70e:1980::142:164"
+      mac: "02:00:00:14:21:64"
   name: "GoldDoge Networks"
   cfg:
     filtering:
@@ -338,6 +373,7 @@ clients:
 - asn: 203236
   sessions:
     - ip: "fe80::203:236"
+      mac: "02:00:00:20:32:36"
   name: "Lily Network"
   cfg:
     filtering:
@@ -346,6 +382,7 @@ clients:
 - asn: 200536
   sessions:
     - ip: "fe80::200:536"
+      mac: "02:00:00:20:05:36"
   name: "186526 Network"
   cfg:
     filtering:
@@ -354,6 +391,7 @@ clients:
 - asn: 210445
   sessions:
     - ip: "fe80::210:445"
+      mac: "02:00:00:21:04:45"
   name: "CRE Network"
   cfg:
     filtering:
@@ -362,6 +400,7 @@ clients:
 - asn: 62246
   sessions:
     - ip: "fe80::62:246"
+      mac: "02:00:00:06:22:46"
   name: "WJY Network"
   cfg:
     filtering:
@@ -370,6 +409,7 @@ clients:
 - asn: 51087
   sessions:
     - ip: "fe80::51:87"
+      mac: "02:00:00:05:10:87"
   name: "Bling Network"
   cfg:
     filtering:
@@ -378,6 +418,7 @@ clients:
 - asn: 23347
   sessions:
     - ip: "fe80::23:347"
+      mac: "02:00:00:02:33:47"
   name: "ZYC Network"
   cfg:
     filtering:
@@ -386,6 +427,7 @@ clients:
 - asn: 30114
   sessions:
     - ip: "fe80::30:114"
+      mac: "02:00:00:03:01:14"
   name: "Decima LLC"
   cfg:
     filtering:
@@ -394,6 +436,7 @@ clients:
 - asn: 139888
   sessions:
     - ip: 2404:f4c0:f70e:1980::139:888
+      mac: "02:00:00:13:98:88"
   name: "Time Network"
   cfg:
     filtering:
@@ -402,6 +445,7 @@ clients:
 - asn: 150184
   sessions:
     - ip: fe80::150:184
+      mac: "02:00:00:15:01:84"
   name: "OwONet"
   cfg:
     filtering:
@@ -410,6 +454,7 @@ clients:
 - asn: 27010
   sessions:
     - ip: fe80::27:10
+      mac: "02:00:00:02:70:10"
   name: "23751 NET"
   cfg:
     filtering:
@@ -418,6 +463,7 @@ clients:
 - asn: 60900
   sessions:
     - ip: 2404:f4c0:f70e:1980::60:900
+      mac: "02:00:00:06:09:00"
   name: "Ssmidge LLC"
   cfg:
     filtering:
@@ -427,6 +473,7 @@ clients:
 - asn: 44324
   sessions:
     - ip: fe80::44:324
+      mac: "02:00:00:04:43:24"
   name: "Pigeon Network"
   cfg:
     filtering:
@@ -458,6 +505,7 @@ clients:
 - asn: 18428
   sessions:
     - ip: 2404:f4c0:f70e:1980::18:428
+      mac: "02:00:00:01:84:28"
   name: "Mercycat Network"
   cfg:
     filtering:
@@ -466,6 +514,7 @@ clients:
 - asn: 142553
   sessions:
     - ip: 2404:f4c0:f70e:1980::142:553
+      mac: "02:00:00:14:25:53"
   name: "AIRS Network"
   cfg:
     filtering:
@@ -474,6 +523,7 @@ clients:
 - asn: 151674
   sessions:
     - ip: fe80::151:674
+      mac: "02:00:00:15:16:74"
   name: "HYU-NET"
   cfg:
     filtering:
@@ -482,6 +532,7 @@ clients:
 - asn: 202881
   sessions:
     - ip: 2404:f4c0:f70e:1980::202:881
+      mac: "02:00:00:20:28:81"
   name: "MTS Network"
   cfg:
     filtering:
@@ -490,6 +541,7 @@ clients:
 - asn: 199310
   sessions:
     - ip: fe80::199:310
+      mac: "02:00:00:19:93:10"
   name: "QFNET"
   cfg:
     filtering:
@@ -498,6 +550,7 @@ clients:
 - asn: 197860
   sessions:
     - ip: fe80::197:860
+      mac: "02:00:00:19:78:60"
   name: "Haruka Network"
   cfg:
     filtering:
@@ -506,6 +559,7 @@ clients:
 - asn: 211035
   sessions:
     - ip: fe80::211:035
+      mac: "02:00:00:21:10:35"
   name: "PHANTOM HIVE NETWORK"
   cfg:
     filtering:
@@ -514,6 +568,7 @@ clients:
 - asn: 53808
   sessions:
     - ip: fe80::53:808
+      mac: "02:00:00:05:38:08"
   name: "MoeDove"
   cfg:
     filtering:
@@ -522,6 +577,7 @@ clients:
 - asn: 216123
   sessions:
     - ip: 2404:f4c0:f70e:1980::216:123
+      mac: "02:00:00:21:61:23"
   name: "ZhuyuanNetwork"
   cfg:
     filtering:
@@ -530,6 +586,7 @@ clients:
 - asn: 215956
   sessions:
     - ip: 2404:f4c0:f70e:1980::215:956
+      mac: "02:00:00:21:59:56"
   name: "Dennis de Houx trading as All In One"
   cfg:
     filtering:
@@ -538,6 +595,7 @@ clients:
 - asn: 215934
   sessions:
     - ip: 2404:f4c0:f70e:1980::215:934
+      mac: "02:00:00:21:59:34"
   name: "Qian Network"
   cfg:
     filtering:
@@ -546,6 +604,7 @@ clients:
 - asn: 204244
   sessions:
     - ip: fe80::204:244
+      mac: "02:00:00:20:42:44"
   name: "MNTG Network Global"
   cfg:
     filtering:
@@ -554,6 +613,7 @@ clients:
 - asn: 207852
   sessions:
     - ip: fe80::207:852
+      mac: "02:00:00:20:78:52"
   name: "Y525 Global Network"
   cfg:
     filtering:
@@ -562,6 +622,7 @@ clients:
 - asn: 215750
   sessions:
     - ip: 2404:f4c0:f70e:1980::215:750
+      mac: "02:00:00:21:57:50"
   name: "TENONET"
   cfg:
     filtering:
@@ -570,6 +631,7 @@ clients:
 - asn: 401835
   sessions:
     - ip: fe80::401:835
+      mac: "02:00:00:40:18:35"
   name: "BCR"
   cfg:
     filtering:
@@ -577,8 +639,10 @@ clients:
         as_sets: [AS-BCR]
 - asn: 40929
   sessions:
-    - ip: "2404:f4c0:f70e:1980::1:40:929"
     - ip: "fe80::40:929"
+      mac: "02:00:00:04:09:29"
+    - ip: "2404:f4c0:f70e:1980::1:40:929"
+      mac: "02:00:01:04:09:29"
   name: "MoeDove R&E Network"
   cfg:
     filtering:
@@ -587,6 +651,7 @@ clients:
 - asn: 213605
   sessions:
     - ip: 2404:f4c0:f70e:1980::213:605
+      mac: "02:00:00:21:36:05"
   name: "Liu HaoRan"
   cfg:
     filtering:
@@ -617,6 +682,7 @@ clients:
 - asn: 211575
   sessions:
     - ip: 2404:f4c0:f70e:1980::211:575
+      mac: "02:00:00:21:15:75"
   name: "Rui Feng"
   cfg:
     filtering:
@@ -625,6 +691,7 @@ clients:
 - asn: 150289
   sessions:
     - ip: 2404:f4c0:f70e:1980::150:289
+      mac: "02:00:00:15:02:89"
   name: "Sun Yanzheng"
   cfg:
     filtering:
@@ -633,6 +700,7 @@ clients:
 - asn: 213428
   sessions:
     - ip: fe80::213:428
+      mac: "02:00:00:21:34:28"
   name: "Haco Network"
   cfg:
     filtering:
