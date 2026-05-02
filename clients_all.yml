@@ -697,3 +697,12 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS213428:AS-HACO]
+- asn: 33622
+  sessions:
+    - ip: fe80::33:622
+      mac: "02:00:00:03:36:22"
+  name: "NEXET LLC"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
