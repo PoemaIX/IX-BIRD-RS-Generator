@@ -1,5 +1,5 @@
 #!/bin/bash
-export PYTHONPATH=/root/gitrs/ars
+export PYTHONPATH="/root/gitrs/RIPE-AS-SET-SYNC:/root/gitrs/ars:$PYTHONPATH"
 set -x
 set -e
 

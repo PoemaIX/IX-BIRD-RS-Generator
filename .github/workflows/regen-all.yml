@@ -113,11 +113,12 @@ jobs:
         pip3 install -r /root/gitrs/ars/requirements.txt
         /root/arouteserver/scripts/gen_rs.sh
       env:
+        PYTHONPATH: "/root/gitrs/RIPE-AS-SET-SYNC"
         SECRET_PEERINGDB_API_KEY: ${{secrets.SECRET_PEERINGDB_API_KEY}}
         PIP_BREAK_SYSTEM_PACKAGES: 1
         HOME: /root
       shell: bash
-      
+
     - name: push ixpage back
       run: |
         pip3 install pipenv jieba==0.42.1
@@ -132,8 +133,10 @@ jobs:
         /root/arouteserver/scripts/sync_asset.sh
         /root/arouteserver/scripts/sync_ixpage.sh -b
       env:
+        PYTHONPATH: "/root/gitrs/RIPE-AS-SET-SYNC"
         HOME: /root
-        RIPE_PASSWD: ${{secrets.RIPE_PASSWD}}
+        RIPE_CLIENT_CERT: ${{secrets.RIPE_CLIENT_CERT}}
+        RIPE_CLIENT_KEY: ${{secrets.RIPE_CLIENT_KEY}}
         GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
         PIP_BREAK_SYSTEM_PACKAGES: 1
       shell: bash

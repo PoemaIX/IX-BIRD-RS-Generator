@@ -3,13 +3,13 @@ import datetime
 import json
 import requests
 import yaml
-from bird_parser import get_bird_session
+from ripe_asset_sync import parse_bird_protocols, filter_established_sessions
+
 client = yaml.safe_load( open("/root/arouteserver/clients_all.yml").read())
 yaml.SafeDumper.ignore_aliases = lambda self, data: True
 
 RS1_birdc = requests.get("http://[2404:f4c0:f70e:1980::1:1]:3234/bird?q=show+protocols+all").text
-RS1_info  = get_bird_session(birdc_output=RS1_birdc)
-RS1_estab = set(map(lambda x:x["as"]["remote"],filter(lambda x:x["state"] == "Established" and x["route"]["ipv6"]["imported"] > 0 ,RS1_info)))
+RS1_estab = filter_established_sessions(parse_bird_protocols(birdc_output=RS1_birdc))
 
 # prepare ixp_list data
 ixp_list = [{
