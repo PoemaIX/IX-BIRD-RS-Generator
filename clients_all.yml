@@ -182,15 +182,6 @@ clients:
         max: 48
       #reject_policy: 
         #policy: tag
-- asn: 142055
-  sessions:
-    - ip: "fe80::142:055"
-      mac: "02:00:00:14:20:55"
-  name: "Anillc Network"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: [AS-ANILLC]
 - asn: 203472
   sessions:
     - ip: "fe80::203:472"
