@@ -41,6 +41,7 @@ mkdir -p /tmp/ixpage_bak
 cp -r site /tmp/ixpage_bak/ 2>/dev/null || true
 pip3 install git-filter-repo
 git filter-repo --invert-paths --path site/ --force
+git remote add origin git@github.com:PoemaIX/KSKB-IX.git
 cp -r /tmp/ixpage_bak/site . 2>/dev/null || true
 rm -rf /tmp/ixpage_bak
 
