@@ -29,6 +29,8 @@ jobs:
     steps:
     - name: Checkout Central Actions Repo
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
     - name: symlink to /root/arouteserver
       run: |
         sudo chmod 777 /root
@@ -127,21 +129,22 @@ jobs:
         GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
         PIP_BREAK_SYSTEM_PACKAGES: 1
       shell: bash
-    - name: Commit
+    - name: Commit and push
       run: |
         cd $GITHUB_WORKSPACE
+        BIRD_FILES="bird_rs1.conf bird_rs2.conf bird_rs1.conf.md5 bird_rs2.conf.md5"
+        mkdir -p /tmp/bird_bak
+        for f in $BIRD_FILES; do [ -f "$f" ] && cp "$f" /tmp/bird_bak/; done
+        pip3 install git-filter-repo
+        git filter-repo --invert-paths \
+          --path bird_rs1.conf --path bird_rs2.conf \
+          --path bird_rs1.conf.md5 --path bird_rs2.conf.md5 \
+          --force
+        cp /tmp/bird_bak/* . 2>/dev/null || true
         git add -A
         if ! git diff-index --quiet HEAD; then
-          LAST_MSG=$(git log -1 --pretty=%s)
-          if [ "$LAST_MSG" = "update" ]; then
-            git commit --amend --no-edit -a
-          else
-            git commit -m "update" -a
-          fi
+          git commit -m "update"
         fi
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: master
-        force: true
+        git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:master
+      env:
+        PIP_BREAK_SYSTEM_PACKAGES: 1

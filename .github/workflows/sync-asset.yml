@@ -114,21 +114,9 @@ jobs:
         GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
         PIP_BREAK_SYSTEM_PACKAGES: 1
       shell: bash
-    - name: Commit
+    - name: Commit and push
       run: |
         cd $GITHUB_WORKSPACE
         git add -A
-        if ! git diff-index --quiet HEAD; then
-          LAST_MSG=$(git log -1 --pretty=%s)
-          if [ "$LAST_MSG" = "update" ]; then
-            git commit --amend --no-edit -a
-          else
-            git commit -m "update" -a
-          fi
-        fi
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: master
-        force: true
+        git diff-index --quiet HEAD || git commit --amend --no-edit -a
+        git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:master
