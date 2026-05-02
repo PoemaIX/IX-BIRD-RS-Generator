@@ -3,8 +3,6 @@ export PYTHONPATH="/root/gitrs/RIPE-AS-SET-SYNC:/root/gitrs/ars:$PYTHONPATH"
 set -x
 set -e
 
-cp /root/arouteserver/scripts/__pycache__/.gitignore /root/arouteserver/cache/.gitignore
-
 cd /root/gitrs/ars
 /root/arouteserver/scripts/gen_rs.py 2
 cp /root/arouteserver/clients_rs2.yml /root/arouteserver/clients.yml

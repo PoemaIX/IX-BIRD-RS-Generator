@@ -12,6 +12,12 @@ git fetch --all --force
 git reset --hard origin/main
 /root/arouteserver/scripts/gen_ixpf.py | sed "s/fe80::/2404:f4c0:f70e:1980::/g" > /root/gitrs/KSKB-IX/static/files/ix-f.json
 /root/arouteserver/scripts/gen_member_page.py
+
+if git diff --quiet; then
+  echo "No changes detected, skipping ixpage update"
+  exit 0
+fi
+
 DATE=$(date +'%Y-%m-%d %H:%M:%S')
 
 build_mkdocs=

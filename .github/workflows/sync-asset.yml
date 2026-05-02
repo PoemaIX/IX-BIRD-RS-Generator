@@ -86,6 +86,8 @@ jobs:
         export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ars"
         git clone git@github.com:PoemaIX/arouteserver.git /root/gitrs/ars
         git clone https://github.com/PoemaIX/RIPE-AS-SET-SYNC.git /root/gitrs/RIPE-AS-SET-SYNC
+        mkdir -p /root/arouteserver/cache
+        echo "*" > /root/arouteserver/cache/.gitignore
     - name: reset to girts origin
       run: |
         export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /root/.ssh/id_rsa_ixpage"
