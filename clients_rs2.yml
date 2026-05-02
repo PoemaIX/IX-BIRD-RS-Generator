@@ -1,126 +1,125 @@
 clients:
 - asn: 199594
-  ip: fe80::1000:199:594
   cfg:
     filtering:
       irrdb:
         as_sets: []
+  ip: fe80::1000:199:594
 - asn: 207705
-  ip: fe80::207:705
   cfg:
     filtering:
       irrdb:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+  ip: fe80::207:705
 - asn: 213262
-  ip: fe80::213:262
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-CUTE
+  ip: fe80::213:262
 - asn: 60539
-  ip: fe80::60:539
   cfg:
     filtering:
       irrdb:
         as_sets: []
+  ip: fe80::60:539
 - asn: 141237
-  ip: 2404:f4c0:f70e:1980::141:237
   cfg:
     filtering:
       irrdb:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+  ip: 2404:f4c0:f70e:1980::141:237
 - asn: 139317
-  ip: fe80::139:317
   cfg:
     filtering:
       irrdb:
         as_sets: []
+  ip: fe80::139:317
 - asn: 7721
-  ip: fe80::7721
   cfg:
     filtering:
       irrdb:
         as_sets:
         - APNIC::AS-QINCLOUD
+  ip: fe80::7721
 - asn: 209306
-  ip: 2404:f4c0:f70e:1980::209:306
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS209306:AS-SET
+  ip: 2404:f4c0:f70e:1980::209:306
 - asn: 202335
-  ip: fe80::202:335
   cfg:
     filtering:
       irrdb:
         as_sets:
         - RIPE::AS-MOEBEE-CN
+  ip: fe80::202:335
 - asn: 140731
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
+    attach_custom_communities:
+    - as_path_from_stuix
   ip: fe80::140:731
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: []
-    attach_custom_communities:
-    - as_path_from_stuix
 - asn: 142281
-  ip: fe80::142:281
   cfg:
     filtering:
       irrdb:
         as_sets: []
+  ip: fe80::142:281
 - asn: 208223
-  ip: fe80::208:223
   cfg:
     filtering:
       irrdb:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+  ip: fe80::208:223
 - asn: 212483
-  ip: fe80::212:483
   cfg:
     filtering:
       irrdb:
         as_sets:
         - RIPE::AS-86
+  ip: fe80::212:483
 - asn: 210932
-  ip: fe80::210:932
   cfg:
     filtering:
       irrdb:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+  ip: fe80::210:932
 - asn: 12198
-  ip: fe80::12:198
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-JSMSR
+  ip: fe80::12:198
 - asn: 17415
-  ip: 2404:f4c0:f70e:1980::17:415
   cfg:
     filtering:
       irrdb:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+  ip: 2404:f4c0:f70e:1980::17:415
 - asn: 209554
-  ip: 2404:f4c0:f70e:1980::209:554
   cfg:
     filtering:
       irrdb:
         as_sets: []
+  ip: 2404:f4c0:f70e:1980::209:554
 - asn: 60326
-  ip: 2404:f4c0:f70e:1980::60:326
   cfg:
     filtering:
       irrdb:
@@ -147,72 +146,72 @@ clients:
         max: 48
     attach_custom_communities:
     - as_path_from_stuix
+  ip: 2404:f4c0:f70e:1980::60:326
 - asn: 142055
-  ip: fe80::142:055
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-ANILLC
+  ip: fe80::142:055
 - asn: 203472
-  ip: fe80::203:472
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-POEMA
+  ip: fe80::203:472
 - asn: 205603
-  ip: 2404:f4c0:f70e:1980::205:603
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-WOLFLAB
+  ip: 2404:f4c0:f70e:1980::205:603
 - asn: 57429
-  ip: 2404:f4c0:f70e:1980::57:429
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-HARAGUROICHA
+  ip: 2404:f4c0:f70e:1980::57:429
 - asn: 204508
-  ip: fe80::204:508
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-MLGT
+  ip: fe80::204:508
 - asn: 203314
-  ip: fe80::203:314
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-HATSNET
+  ip: fe80::203:314
 - asn: 212154
-  ip: fe80::212:154
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-SARUNETWORK
+  ip: fe80::212:154
 - asn: 131171
-  ip: fe80::131:171
   cfg:
     filtering:
       irrdb:
         as_sets:
         - APNIC::AS-SET-AS131171
+  ip: fe80::131:171
 - asn: 57406
-  ip: fe80::57:406
   cfg:
     filtering:
       irrdb:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+  ip: fe80::57:406
 - asn: 205329
-  ip: 2404:f4c0:f70e:1980::205:329
   cfg:
     filtering:
       irrdb:
@@ -239,54 +238,54 @@ clients:
         max: 48
     attach_custom_communities:
     - as_path_from_stuix
+  ip: 2404:f4c0:f70e:1980::205:329
 - asn: 210000
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
+    attach_custom_communities:
+    - as_path_from_stuix
   ip: 2404:f4c0:f70e:1980::210:0
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: []
-    attach_custom_communities:
-    - as_path_from_stuix
 - asn: 202939
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
+    attach_custom_communities:
+    - as_path_from_stuix
   ip: fe80::202:939
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: []
-    attach_custom_communities:
-    - as_path_from_stuix
 - asn: 202776
-  ip: 2404:f4c0:f70e:1980::202:776
   cfg:
     filtering:
       irrdb:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+  ip: 2404:f4c0:f70e:1980::202:776
 - asn: 207268
-  ip: fe80::207:268
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-STREXP
+  ip: fe80::207:268
 - asn: 201217
-  ip: fe80::201:217
   cfg:
     filtering:
       irrdb:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+  ip: fe80::201:217
 - asn: 138435
-  ip: fe80::138:435
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-YUETAU
+  ip: fe80::138:435
 - asn: 142427
-  ip: fe80::142:427
   cfg:
     filtering:
       irrdb:
@@ -296,89 +295,89 @@ clients:
         - prefix: '2602:feda:dc0::'
           length: 44
           asn: 142247
+  ip: fe80::142:427
 - asn: 142164
-  ip: 2404:f4c0:f70e:1980::142:164
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-142164
+  ip: 2404:f4c0:f70e:1980::142:164
 - asn: 203236
-  ip: fe80::203:236
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-LILY
+  ip: fe80::203:236
 - asn: 200536
-  ip: fe80::200:536
   cfg:
     filtering:
       irrdb:
         as_sets: []
+  ip: fe80::200:536
 - asn: 210445
-  ip: fe80::210:445
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-CRENET
+  ip: fe80::210:445
 - asn: 62246
-  ip: fe80::62:246
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-WJY
+  ip: fe80::62:246
 - asn: 51087
-  ip: fe80::51:87
   cfg:
     filtering:
       irrdb:
         as_sets:
         - ARIN::AS-BLING
+  ip: fe80::51:87
 - asn: 23347
-  ip: fe80::23:347
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-ZYC
+  ip: fe80::23:347
 - asn: 30114
-  ip: fe80::30:114
   cfg:
     filtering:
       irrdb:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+  ip: fe80::30:114
 - asn: 139888
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
   ip: 2404:f4c0:f70e:1980::139:888
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: []
 - asn: 150184
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
   ip: fe80::150:184
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: []
 - asn: 27010
-  ip: fe80::27:10
   cfg:
     filtering:
       irrdb:
         as_sets: []
+  ip: fe80::27:10
 - asn: 60900
-  ip: 2404:f4c0:f70e:1980::60:900
   cfg:
     filtering:
       irrdb:
         as_sets:
         - RIPE::AS60900:AS-MAIN
+  ip: 2404:f4c0:f70e:1980::60:900
 - asn: 44324
-  ip: fe80::44:324
   cfg:
     filtering:
       irrdb:
@@ -405,126 +404,126 @@ clients:
         max: 48
     attach_custom_communities:
     - as_path_from_stuix
+  ip: fe80::44:324
 - asn: 18428
-  ip: 2404:f4c0:f70e:1980::18:428
   cfg:
     filtering:
       irrdb:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+  ip: 2404:f4c0:f70e:1980::18:428
 - asn: 142553
-  ip: 2404:f4c0:f70e:1980::142:553
   cfg:
     filtering:
       irrdb:
         as_sets: []
+  ip: 2404:f4c0:f70e:1980::142:553
 - asn: 151674
-  ip: fe80::151:674
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS151674:AS-HYUNET
+  ip: fe80::151:674
 - asn: 202881
-  ip: 2404:f4c0:f70e:1980::202:881
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-MTSN
+  ip: 2404:f4c0:f70e:1980::202:881
 - asn: 199310
-  ip: fe80::199:310
   cfg:
     filtering:
       irrdb:
         as_sets: []
+  ip: fe80::199:310
 - asn: 197860
-  ip: fe80::197:860
   cfg:
     filtering:
       irrdb:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+  ip: fe80::197:860
 - asn: 211035
-  ip: fe80::211:035
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS211035:AS-PHANTOM-HIVE
+  ip: fe80::211:035
 - asn: 53808
-  ip: fe80::53:808
   cfg:
     filtering:
       irrdb:
         as_sets: []
+  ip: fe80::53:808
 - asn: 216123
-  ip: 2404:f4c0:f70e:1980::216:123
   cfg:
     filtering:
       irrdb:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+  ip: 2404:f4c0:f70e:1980::216:123
 - asn: 215956
-  ip: 2404:f4c0:f70e:1980::215:956
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS215956:AS-MYIP
+  ip: 2404:f4c0:f70e:1980::215:956
 - asn: 215934
-  ip: 2404:f4c0:f70e:1980::215:934
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS215934:AS-QIANOWO
+  ip: 2404:f4c0:f70e:1980::215:934
 - asn: 204244
-  ip: fe80::204:244
   cfg:
     filtering:
       irrdb:
         as_sets: []
+  ip: fe80::204:244
 - asn: 207852
-  ip: fe80::207:852
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-Y525
+  ip: fe80::207:852
 - asn: 215750
-  ip: 2404:f4c0:f70e:1980::215:750
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS215750:AS-SET
+  ip: 2404:f4c0:f70e:1980::215:750
 - asn: 401835
-  ip: fe80::401:835
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-BCR
+  ip: fe80::401:835
 - asn: 40929
+  cfg:
+    filtering:
+      irrdb:
+        as_sets:
+        - AS-MOEDOVE-BN
   ip: 2404:f4c0:f70e:1980::1:40:929
-  cfg:
-    filtering:
-      irrdb:
-        as_sets:
-        - AS-MOEDOVE-BN
 - asn: 40929
-  ip: fe80::40:929
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS-MOEDOVE-BN
+  ip: fe80::40:929
 - asn: 213605
-  ip: 2404:f4c0:f70e:1980::213:605
   cfg:
     filtering:
       irrdb:
@@ -551,26 +550,27 @@ clients:
         max: 48
     attach_custom_communities:
     - as_path_from_stuix
+  ip: 2404:f4c0:f70e:1980::213:605
 - asn: 211575
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: []
+    attach_custom_communities:
+    - as_path_from_stuix
   ip: 2404:f4c0:f70e:1980::211:575
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: []
-    attach_custom_communities:
-    - as_path_from_stuix
 - asn: 150289
-  ip: 2404:f4c0:f70e:1980::150:289
   cfg:
     filtering:
       irrdb:
         as_sets: []
     attach_custom_communities:
     - as_path_from_stuix
+  ip: 2404:f4c0:f70e:1980::150:289
 - asn: 213428
-  ip: fe80::213:428
   cfg:
     filtering:
       irrdb:
         as_sets:
         - AS213428:AS-HACO
+  ip: fe80::213:428
