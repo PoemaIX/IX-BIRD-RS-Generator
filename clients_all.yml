@@ -236,15 +236,6 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-SARUNETWORK]
-- asn: 131171
-  sessions:
-    - ip: "fe80::131:171"
-      mac: "02:00:00:13:11:71"
-  name: "Everlife Networks"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: [APNIC::AS-SET-AS131171]
 - asn: 57406
   sessions:
     - ip: "fe80::57:406"
