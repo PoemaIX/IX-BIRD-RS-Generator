@@ -339,19 +339,6 @@ clients:
     filtering:
       irrdb:
         as_sets: [AS-YUETAU]
-- asn: 142427
-  sessions:
-    - ip: "fe80::142:427"
-      mac: "02:00:00:14:24:27"
-  name: "Meson Global Network"
-  cfg:
-    filtering:
-      irrdb:
-        as_sets: [AS-MESON-SELF]
-        white_list_route:
-          - prefix: "2602:feda:dc0::"
-            length: 44
-            asn: 142247
 - asn: 142164
   sessions:
     - ip: "2404:f4c0:f70e:1980::142:164"
