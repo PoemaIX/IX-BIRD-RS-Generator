@@ -675,3 +675,12 @@ clients:
     filtering:
       irrdb:
         as_sets: []
+- asn: 200078
+  sessions:
+    - ip: fe80::200:078
+      mac: "02:00:00:20:00:78"
+  name: "Potat0 Network"
+  cfg:
+    filtering:
+      irrdb:
+        as_sets: [AS200078:AS-SET]
