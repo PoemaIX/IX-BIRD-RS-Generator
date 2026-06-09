@@ -133,6 +133,7 @@ jobs:
         git config --global user.email si@kskb.eu.org
         git config --global user.name KusakabeSi
         /root/arouteserver/scripts/sync_asset.sh
+        rm -rf /root/gitrs/KSKB-IX/.git/filter-repo/
         /root/arouteserver/scripts/sync_ixpage.sh -b
       env:
         PYTHONPATH: "/root/gitrs/RIPE-AS-SET-SYNC"
@@ -149,6 +150,7 @@ jobs:
         mkdir -p /tmp/bird_bak
         for f in $BIRD_FILES; do [ -f "$f" ] && cp "$f" /tmp/bird_bak/; done
         pip3 install git-filter-repo
+        rm -rf .git/filter-repo/
         git filter-repo --invert-paths --force \
           --path bird_rs1.conf --path bird_rs2.conf \
           --path bird_rs1.conf.md5 --path bird_rs2.conf.md5 \
